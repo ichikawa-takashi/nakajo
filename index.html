@@ -1,0 +1,1394 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Cormorant+Infant:ital@0;1&family=Noto+Serif+JP:wght@200..900&family=Shippori+Mincho+B1:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>中条商事株式会社 採用情報</title>
+  </head>
+
+  <body>
+    <!-- ============================================================
+    ヘッダー
+  ============================================================ -->
+    <header class="header" id="header">
+      <div class="header__inner">
+        <a href="#" class="header__logo">
+          <img src="./img/header-logo.svg" alt="中条商事" />
+        </a>
+        <nav class="header__nav">
+          <ul class="header__nav-list">
+            <li><a href="#message">代表メッセージ</a></li>
+            <li><a href="#interview">先輩社員の声</a></li>
+            <li><a href="#data-info">数字で見る働く環境</a></li>
+            <li><a href="#job">募集要項</a></li>
+            <li><a href="#store">店舗情報</a></li>
+          </ul>
+        </nav>
+        <div class="header__actions">
+          <a href="#entry" class="header__cta-btn">
+            <img src="./img/header-cta-bg.png" alt="" class="header__cta-bg" />
+            <span class="header__cta-text">
+              <span>ENTRY</span><span class="header__cta-sep">／</span
+              ><span>DL</span>
+            </span>
+          </a>
+          <a href="#entry" class="header__pc-btn header__pc-btn--outline"
+            >説明会に申し込む
+            <div class="header-pc-btn__bg">
+              <svg xmlns="http://www.w3.org/2000/svg" width="188" height="46" viewBox="0 0 188 46" fill="none">
+                <mask id="path-1-inside-1_1_3201" fill="white">
+                  <path d="M188 26.7217C184.256 31.7324 177.13 39.9624 171.755 46H0V16.4775C3.62739 11.8202 9.27452 5.27622 13.9473 0H188V26.7217Z"/>
+                </mask>
+                <path d="M188 26.7217C184.256 31.7324 177.13 39.9624 171.755 46H0V16.4775C3.62739 11.8202 9.27452 5.27622 13.9473 0H188V26.7217Z" fill="white"/>
+                <path d="M188 26.7217L188.401 27.021L188.5 26.8879V26.7217H188ZM171.755 46V46.5H171.979L172.128 46.3325L171.755 46ZM0 46H-0.5V46.5H0V46ZM0 16.4775L-0.39447 16.1703L-0.5 16.3058V16.4775H0ZM13.9473 0V-0.5H13.7222L13.573 -0.331499L13.9473 0ZM188 0H188.5V-0.5H188V0ZM188 26.7217L187.599 26.4224C183.87 31.4136 176.758 39.6286 171.381 45.6675L171.755 46L172.128 46.3325C177.502 40.2963 184.642 32.0513 188.401 27.021L188 26.7217ZM171.755 46V45.5H0V46V46.5H171.755V46ZM0 46H0.5V16.4775H0H-0.5V46H0ZM0 16.4775L0.39447 16.7848C4.01144 12.1408 9.64956 5.6069 14.3216 0.331499L13.9473 0L13.573 -0.331499C8.89948 4.94554 3.24334 11.4996 -0.39447 16.1703L0 16.4775ZM13.9473 0V0.5H188V0V-0.5H13.9473V0ZM188 0H187.5V26.7217H188H188.5V0H188Z" fill="#927010" mask="url(#path-1-inside-1_1_3201)"/>
+              </svg>
+            </div></a
+          >
+          <a href="#download" class="header__pc-btn header__pc-btn--fill"
+            >パンフレットをダウンロード
+            <div class="header-pc-btn__bg">
+            <svg xmlns="http://www.w3.org/2000/svg" width="268" height="46" viewBox="0 0 268 46" fill="none">
+              <mask id="path-1-inside-1_1_3209" fill="white">
+                <path d="M268 27.4863C264.135 32.5393 257.443 40.2603 252.333 46H0V16.4775C3.62739 11.8202 9.27452 5.27622 13.9473 0H268V27.4863Z"/>
+              </mask>
+              <path d="M268 27.4863C264.135 32.5393 257.443 40.2603 252.333 46H0V16.4775C3.62739 11.8202 9.27452 5.27622 13.9473 0H268V27.4863Z" fill="#A99357"/>
+              <path d="M268 27.4863L268.397 27.7901L268.5 27.6556V27.4863H268ZM252.333 46V46.5H252.557L252.706 46.3325L252.333 46ZM0 46H-0.5V46.5H0V46ZM0 16.4775L-0.39447 16.1703L-0.5 16.3058V16.4775H0ZM13.9473 0V-0.5H13.7222L13.573 -0.331499L13.9473 0ZM268 0H268.5V-0.5H268V0ZM268 27.4863L267.603 27.1826C263.75 32.2191 257.069 39.9277 251.96 45.6675L252.333 46L252.706 46.3325C257.816 40.5929 264.52 32.8595 268.397 27.7901L268 27.4863ZM252.333 46V45.5H0V46V46.5H252.333V46ZM0 46H0.5V16.4775H0H-0.5V46H0ZM0 16.4775L0.39447 16.7848C4.01144 12.1408 9.64956 5.6069 14.3216 0.331499L13.9473 0L13.573 -0.331499C8.89948 4.94554 3.24334 11.4996 -0.39447 16.1703L0 16.4775ZM13.9473 0V0.5H268V0V-0.5H13.9473V0ZM268 0H267.5V27.4863H268H268.5V0H268Z" fill="#927010" mask="url(#path-1-inside-1_1_3209)"/>
+            </svg></div></a
+          >
+          <button
+            class="header__hamburger js-hamburger js-drawer-open"
+            id="MenuButton"
+            aria-label="メニューを開く"
+          >
+            <img
+              src="./img/hamburder-bg-lt.svg"
+              alt=""
+              class="header__hamburger-deco header__hamburger-deco--lt"
+              aria-hidden="true"
+            />
+            <img
+              src="./img/hamburder-bg-rb.svg"
+              alt=""
+              class="header__hamburger-deco header__hamburger-deco--rb"
+              aria-hidden="true"
+            />
+            <span class="header__hamburger-lines">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- ============================================================
+    ドロワーメニュー
+  ============================================================ -->
+    <div class="drawer drawer-menu js-drawer">
+      <div class="drawer__body">
+        <nav class="drawer__nav">
+          <ul class="drawer__list">
+            <li class="drawer__item">
+              <a href="#message" class="drawer__link js-drawer">
+                <span class="drawer__num">01</span>
+                <span class="drawer__jp">代表メッセージ</span>
+                <span class="drawer__en">MESSAGE</span>
+              </a>
+            </li>
+            <li class="drawer__item">
+              <a href="#interview" class="drawer__link js-drawer">
+                <span class="drawer__num">02</span>
+                <span class="drawer__jp">先輩社員の声</span>
+                <span class="drawer__en">INTERVIEW</span>
+              </a>
+            </li>
+            <li class="drawer__item">
+              <a href="#data-info" class="drawer__link js-drawer">
+                <span class="drawer__num">03</span>
+                <span class="drawer__jp">数字で見る働く環境</span>
+                <span class="drawer__en">DATA &amp; INFO</span>
+              </a>
+            </li>
+            <li class="drawer__item">
+              <a href="#job" class="drawer__link js-drawer">
+                <span class="drawer__num">04</span>
+                <span class="drawer__jp">募集要項</span>
+                <span class="drawer__en">JOB DESCRIPTION</span>
+              </a>
+            </li>
+            <li class="drawer__item">
+              <a href="#store" class="drawer__link js-drawer">
+                <span class="drawer__num">05</span>
+                <span class="drawer__jp">店舗情報</span>
+                <span class="drawer__en">STORE</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="drawer__cta">
+          <a href="#entry" class="drawer__cta-btn js-drawer">
+            <img
+              src="./img/entry-cta-bg.svg"
+              alt=""
+              class="drawer__cta-btn-bg"
+              aria-hidden="true"
+            />
+            <span class="drawer__cta-btn-text">説明会に申し込む</span>
+          </a>
+          <a href="#download" class="drawer__cta-btn drawer__cta-btn--dl js-drawer">
+            <img
+              src="./img/download-cta-bg.svg"
+              alt=""
+              class="drawer__cta-btn-bg"
+              aria-hidden="true"
+            />
+            <span class="drawer__cta-btn-text">パンフレットをダウンロード</span>
+          </a>
+        </div>
+        <p class="drawer__copy">NAKAJOU SHOJI CO.,LTD.</p>
+      </div>
+    </div>
+
+    <main class="main">
+      <!-- ============================================================
+      S02_MV：ファーストビュー（スライダー）
+    ============================================================ -->
+      <section class="mv" id="mv">
+        <div class="swiper mv__swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <picture>
+                <source media="(min-width:768px)" srcset="./img/fv-01-pc.jpg">
+                <img src="./img/fv-01.jpg" alt="" />
+              </picture>
+            </div>
+            <div class="swiper-slide">
+              <picture>
+                <source media="(min-width:768px)" srcset="./img/fv-02-pc.jpg">
+                <img src="./img/fv-02.jpg" alt="" />
+              </picture>
+            </div>
+            <div class="swiper-slide">
+              <picture>
+                <source media="(min-width:768px)" srcset="./img/fv-03-pc.jpg">
+                <img src="./img/fv-03.jpg" alt="" />
+              </picture>
+            </div>
+          </div>
+        </div>
+        <div class="mv__overlay"></div>
+        <div class="mv__content">
+          <h1 class="mv__title">人生の節目に、<br />最高の記憶を。</h1>
+          <p class="mv__sub">
+            Crafting the finest memories <br />for life's milestones.
+          </p>
+        </div>
+        <div class="mv__scroll">
+          <div class="mv__scroll-line"></div>
+          <span class="mv__scroll-text">SCROLL</span>
+        </div>
+      </section>
+
+      <!-- ============================================================
+      S03_MESSAGE：代表メッセージ
+    ============================================================ -->
+      <section class="message" id="message">
+        <div class="message__bg">
+          <img src="./img/message-bg.jpg" alt="" class="sp" />
+          <img src="./img/message-bg-pc02.jpg" alt="" class="pc" />
+        </div>
+        <div class="message__inner">
+          <div class="message__heading-block">
+            <p class="message__en">MESSAGE</p>
+            <p class="message__ja">代表メッセージ</p>
+          </div>
+          <div class="message__body">
+            <p>
+              創業50年、私たちは本場の中国料理を広め、<br class="pc">人生の節目に選ばれる最高峰の舞台であり続けてきました。<br class="pc">そして2028年、表参道に新たな店舗を立ち上げます。<br class="pc">
+            私たちが求めるのは、好奇心と探究心を持ち、<br class="pc">一流の技術や文化を貪欲に吸収しようとする人です。<br class="pc">先輩や仲間から学びながら、<br class="pc">自分自身を磨き続けることができる方に、<br class="pc">ぜひ仲間になっていただきたいと考えています。
+            </p>
+            <p>世界のVIPを魅了するおもてなしと技術を、<br class="pc">ともに学び、ともに高めていきましょう。</p>
+            <p>ここにしかない唯一無二の誇りを、<br class="pc">共に創り上げましょう。</p>
+          </div>
+          <div class="message__sign">
+            <p class="message__sign-text">
+              中条商事株式会社<br />代表取締役社長　中条 正義
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <div class="pc-content-bg">
+    <!-- ============================================================
+    PC 左サイドバー（1024px以上で表示）
+  ============================================================ -->
+    <aside class="pc-side-nav">
+      <nav class="pc-side-nav__menu">
+        <ul class="pc-side-nav__list">
+          <li class="pc-side-nav__item">
+            <a href="#message" class="pc-side-nav__link">
+              <span class="pc-side-nav__num">01</span>
+              <span class="pc-side-nav__jp">代表メッセージ</span>
+              <span class="pc-side-nav__en">MESSAGE</span>
+            </a>
+          </li>
+          <li class="pc-side-nav__item">
+            <a href="#interview" class="pc-side-nav__link">
+              <span class="pc-side-nav__num">02</span>
+              <span class="pc-side-nav__jp">先輩社員の声</span>
+              <span class="pc-side-nav__en">INTERVIEW</span>
+            </a>
+          </li>
+          <li class="pc-side-nav__item">
+            <a href="#data-info" class="pc-side-nav__link">
+              <span class="pc-side-nav__num">03</span>
+              <span class="pc-side-nav__jp">数字で見る働く環境</span>
+              <span class="pc-side-nav__en">DATA &amp; INFO</span>
+            </a>
+          </li>
+          <li class="pc-side-nav__item">
+            <a href="#job" class="pc-side-nav__link">
+              <span class="pc-side-nav__num">04</span>
+              <span class="pc-side-nav__jp">募集要項</span>
+              <span class="pc-side-nav__en">JOB DESCRIPTION</span>
+            </a>
+          </li>
+          <li class="pc-side-nav__item">
+            <a href="#store" class="pc-side-nav__link">
+              <span class="pc-side-nav__num">05</span>
+              <span class="pc-side-nav__jp">店舗情報</span>
+              <span class="pc-side-nav__en">STORE</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <div class="pc-side-nav__cta">
+        <a href="#entry" class="pc-side-nav__btn">
+          <img src="./img/entry-cta-bg.svg" alt="" class="pc-side-nav__btn-bg" aria-hidden="true" />
+          <span class="pc-side-nav__btn-text">説明会に申し込む</span>
+        </a>
+        <a href="#download" class="pc-side-nav__btn pc-side-nav__btn--dl">
+          <img src="./img/download-cta-bg.svg" alt="" class="pc-side-nav__btn-bg" aria-hidden="true" />
+          <span class="pc-side-nav__btn-text">パンフレットをダウンロード</span>
+        </a>
+      </div>
+    </aside>
+
+    <!-- ============================================================
+    PC 右サイドバー（1024px以上で表示）
+  ============================================================ -->
+    <aside class="pc-side-logo">
+      <div class="pc-side-logo__inner">
+        <img
+          src="./img/header-logo.svg"
+          alt="中条商事"
+          class="pc-side-logo__img"
+        />
+        <p class="pc-side-logo__name">NAKAJOU SHOJI CO.,LTD.</p>
+      </div>
+    </aside>
+
+        <div class="pc-content-wrapper">
+      <!-- ============================================================
+      S04_INTERVIEW：先輩社員の声（アコーディオン）
+    ============================================================ -->
+
+      <div class="interview__top-img">
+        <img src="./img/interview-top.jpg" alt="" />
+      </div>
+      <section class="interview" id="interview">
+        <div class="interview__heading inner">
+          <h2 class="section-h2">INTERVIEW</h2>
+          <p class="section-h2-sub">先輩社員の声</p>
+        </div>
+        <div class="interview__list">
+          <!-- 01 ホールスタッフ（デフォルトで開いておく） -->
+          <div class="interview__item is-open">
+            <div class="interview__sep"></div>
+            <button class="interview__header js-accordion" aria-expanded="true">
+                <div class="interview__closed">
+                  <div class="interview__label">
+                    <span class="interview__label-main">interview</span>
+                    <span class="interview__label-num">01</span>
+                  </div>
+                  <div class="interview__closed-content">
+                  <img src="./img/accordion-icon01.jpg" alt="" class="interview__thumb">
+                  <div class="interview__closed-info">
+                    <p class="interview__closed-role">ホールスタッフ</p>
+                    <p class="interview__closed-en">Hall</p>
+                    <p class="interview__closed-date">2024年入社</p>
+                  </div>
+                  </div>
+                </div>
+                <div class="interview__info">
+                  <div class="interview__label">
+                    <span class="interview__label-main">interview</span>
+                    <span class="interview__label-num">01</span>
+                  </div>
+                  <p class="interview__role">ホールスタッフ</p>
+                  <div class="interview__meta">
+                    <span>Hall</span>
+                    <span class="interview__meta-sep">/</span>
+                    <span>2024年入社</span>
+                  </div>
+                  <p class="interview__name">鈴木　太陽</p>
+                </div>
+                <span class="interview__icon" aria-hidden="true">
+                  <img
+                    src="./img/hamburder-bg-lt.svg"
+                    alt=""
+                    class="interview__icon-deco interview__icon-deco--lt"
+                    aria-hidden="true"
+                  />
+                  <img
+                    src="./img/hamburder-bg-rb.svg"
+                    alt=""
+                    class="interview__icon-deco interview__icon-deco--rb"
+                    aria-hidden="true"
+                  />
+                </span>
+            </button>
+            <div class="interview__body">
+              <div class="interview__photo">
+                <img src="./img/interview01-01.jpg" alt="鈴木 太陽" />
+              </div>
+              <div class="interview__inner inner">
+                <div class="interview__qa">
+                  <div class="interview__qa-item">
+                    <h3 class="interview__q">入社を決めたきっかけ</h3>
+                    <p class="interview__a">
+                      専門学校と中国飯店のつながりがあり、先輩が実際に働いていたことで興味を持ちました。話を聞く中で、寮や賄いをはじめとした福利厚生の手厚さを知り、長く安心して働ける環境だと感じたことが入社の決め手になりました。
+                    </p>
+                  </div>
+                  <div class="interview__qa-item">
+                    <h3 class="interview__q">
+                      入社に感じたギャップや苦労したこと
+                    </h3>
+                    <p class="interview__a">
+                      ホール経験が全くなかったため、常にお客様の視線を意識しながら気を張り続ける緊張感や立ち仕事に、体が慣れるまで2〜3ヶ月かかりました。料理の提供一つにしても想像以上に気を使うことが多く、上海蟹シーズンの繁忙期は想像を超える忙しさでした。しかし経験を重ねるうちにホールの仕事が楽しくなり、当初のキッチン志望からホールで学び続けることを選びました。
+                    </p>
+                  </div>
+                  <div class="interview__qa-item">
+                    <h3 class="interview__q">今後のキャリアプランや夢</h3>
+                    <p class="interview__a">
+                      自分のお客様を作ることが目標です。常連のお客様には積極的にお声がけをし、事前にお客様の情報をしっかりと確認した上で、何を求めているかを先読みしながらおもてなしができるよう心がけています。小さな気遣いの積み重ねを大切に、集中力を持って継続していきたいと思っています。
+                    </p>
+                  </div>
+                </div>
+                <div class="interview__photo2">
+                  <img src="./img/interview01-02.jpg" alt="" />
+                </div>
+                <div class="interview__schedule">
+                  <div class="interview__schedule-head">
+                    <span class="interview__schedule-en">ONE DAY</span>
+                    <p class="interview__schedule-title">勤務スケジュール</p>
+                  </div>
+                  <ul class="interview__timeline">
+                    <li class="interview__tl-item">
+                      <span class="interview__time">10:30</span>
+                      <span class="interview__task">出勤</span>
+                    </li>
+                    <li class="interview__tl-item">
+                      <span class="interview__time">10:40</span>
+                      <span class="interview__task">賄い</span>
+                    </li>
+                    <li class="interview__tl-item">
+                      <span class="interview__time">11:00</span>
+                      <span class="interview__task">ＭＴＧ</span>
+                    </li>
+                    <li class="interview__tl-item">
+                      <span class="interview__time">11:30</span>
+                      <span class="interview__task">ランチ営業</span>
+                    </li>
+                    <li class="interview__tl-item">
+                      <span class="interview__time">15:00</span>
+                      <span class="interview__task">ランチクローズ</span>
+                    </li>
+                    <li class="interview__tl-item">
+                      <span class="interview__time">15:45</span>
+                      <span class="interview__task">片付け、ディナー準備</span>
+                    </li>
+                    <li class="interview__tl-item">
+                      <span class="interview__time">17:00</span>
+                      <span class="interview__task"
+                        >ディナー準備（セットの見直しや補充確認）</span
+                      >
+                    </li>
+                    <li class="interview__tl-item">
+                      <span class="interview__time">17:30</span>
+                      <span class="interview__task">ディナー営業</span>
+                    </li>
+                    <li class="interview__tl-item">
+                      <span class="interview__time">22:00</span>
+                      <span class="interview__task"
+                        >クローズ<br />※ランチ、ディナー営業中に15分ずつ休憩あり</span
+                        >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 02 キッチンスタッフ -->
+          <div class="interview__item">
+              <div class="interview__sep"></div>
+              <button
+                class="interview__header js-accordion"
+                aria-expanded="false"
+              >
+                <div class="interview__closed">
+                  <div class="interview__label">
+                    <span class="interview__label-main">interview</span>
+                    <span class="interview__label-num">02</span>
+                  </div>
+                  <div class="interview__closed-content">
+                    <img src="./img/accordion-icon02.jpg" alt="" class="interview__thumb">
+                    <div class="interview__closed-info">
+                      <p class="interview__closed-role">キッチンスタッフ</p>
+                      <p class="interview__closed-en">Kitchen</p>
+                      <p class="interview__closed-date">2024年入社</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="interview__info">
+                  <div class="interview__label">
+                    <span class="interview__label-main">interview</span>
+                    <span class="interview__label-num">02</span>
+                  </div>
+                  <p class="interview__role">キッチンスタッフ</p>
+                  <div class="interview__meta">
+                    <span>Kitchen</span>
+                    <span class="interview__meta-sep">/</span>
+                    <span>2024年入社</span>
+                  </div>
+                  <p class="interview__name">氏名 テキスト</p>
+                </div>
+                <span class="interview__icon" aria-hidden="true">
+                  <img
+                    src="./img/hamburder-bg-lt.svg"
+                    alt=""
+                    class="interview__icon-deco interview__icon-deco--lt"
+                    aria-hidden="true"
+                  />
+                  <img
+                    src="./img/hamburder-bg-rb.svg"
+                    alt=""
+                    class="interview__icon-deco interview__icon-deco--rb"
+                    aria-hidden="true"
+                  />
+                </span>
+              </button>
+              <div class="interview__body">
+                <div class="interview__photo">
+                  <img src="./img/interview02-01.jpg" alt="" />
+                </div>
+                <div class="interview__inner inner">
+                  <div class="interview__qa">
+                    <div class="interview__qa-item">
+                      <h3 class="interview__q">入社を決めたきっかけ</h3>
+                      <p class="interview__a">
+                        テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+                      </p>
+                    </div>
+                    <div class="interview__qa-item">
+                      <h3 class="interview__q">
+                        入社に感じたギャップや苦労したこと
+                      </h3>
+                      <p class="interview__a">
+                        テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+                      </p>
+                    </div>
+                    <div class="interview__qa-item">
+                      <h3 class="interview__q">今後のキャリアプランや夢</h3>
+                      <p class="interview__a">
+                        テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+                      </p>
+                    </div>
+                  </div>
+                  <div class="interview__photo2">
+                    <img src="./img/interview02-02.jpg" alt="" />
+                  </div>
+                  <div class="interview__schedule">
+                    <div class="interview__schedule-head">
+                      <span class="interview__schedule-en">ONE DAY</span>
+                      <p class="interview__schedule-title">勤務スケジュール</p>
+                    </div>
+                    <ul class="interview__timeline">
+                      <li class="interview__tl-item">
+                        <span class="interview__time">00:00</span>
+                        <span class="interview__task">テキスト</span>
+                      </li>
+                      <li class="interview__tl-item">
+                        <span class="interview__time">00:00</span>
+                        <span class="interview__task">テキスト</span>
+                      </li>
+                      <li class="interview__tl-item">
+                        <span class="interview__time">00:00</span>
+                        <span class="interview__task">テキスト</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 03 ホールスタッフ／レセプションスタッフ -->
+            <div class="interview__item">
+              <div class="interview__sep"></div>
+              <button
+                class="interview__header js-accordion"
+                aria-expanded="false"
+              >
+                <div class="interview__closed">
+                  <div class="interview__label">
+                    <span class="interview__label-main">interview</span>
+                    <span class="interview__label-num">03</span>
+                  </div>
+                  <div class="interview__closed-content">
+                    <img src="./img/accordion-icon03.jpg" alt="" class="interview__thumb">
+                    <div class="interview__closed-info">
+                      <p class="interview__closed-role">ホールスタッフ／レセプションスタッフ</p>
+                      <p class="interview__closed-en">Hall＆Reception</p>
+                      <p class="interview__closed-date">2020年入社</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="interview__info">
+                  <div class="interview__label">
+                    <span class="interview__label-main">interview</span>
+                    <span class="interview__label-num">03</span>
+                  </div>
+                  <p class="interview__role">
+                    ホールスタッフ／レセプションスタッフ
+                  </p>
+                  <div class="interview__meta">
+                    <span>Hall＆Reception</span>
+                    <span class="interview__meta-sep">/</span>
+                    <span>2020年入社</span>
+                  </div>
+                  <p class="interview__name">氏名 テキスト</p>
+                </div>
+                <span class="interview__icon" aria-hidden="true">
+                  <img
+                    src="./img/hamburder-bg-lt.svg"
+                    alt=""
+                    class="interview__icon-deco interview__icon-deco--lt"
+                    aria-hidden="true"
+                  />
+                  <img
+                    src="./img/hamburder-bg-rb.svg"
+                    alt=""
+                    class="interview__icon-deco interview__icon-deco--rb"
+                    aria-hidden="true"
+                  />
+                </span>
+              </button>
+              <div class="interview__body">
+                <div class="interview__photo">
+                  <img src="./img/interview03-01.jpg" alt="" />
+                </div>
+                <div class="interview__inner inner">
+                  <div class="interview__qa">
+                    <div class="interview__qa-item">
+                      <h3 class="interview__q">入社を決めたきっかけ</h3>
+                      <p class="interview__a">
+                        テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+                      </p>
+                    </div>
+                    <div class="interview__qa-item">
+                      <h3 class="interview__q">
+                        入社に感じたギャップや苦労したこと
+                      </h3>
+                      <p class="interview__a">
+                        テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+                      </p>
+                    </div>
+                    <div class="interview__qa-item">
+                      <h3 class="interview__q">今後のキャリアプランや夢</h3>
+                      <p class="interview__a">
+                        テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+                      </p>
+                    </div>
+                  </div>
+                  <div class="interview__photo2">
+                    <img src="./img/interview03-02.jpg" alt="" />
+                  </div>
+                  <div class="interview__schedule">
+                    <div class="interview__schedule-head">
+                      <span class="interview__schedule-en">ONE DAY</span>
+                      <p class="interview__schedule-title">勤務スケジュール</p>
+                    </div>
+                    <ul class="interview__timeline">
+                      <li class="interview__tl-item">
+                        <span class="interview__time">00:00</span>
+                        <span class="interview__task">テキスト</span>
+                      </li>
+                      <li class="interview__tl-item">
+                        <span class="interview__time">00:00</span>
+                        <span class="interview__task">テキスト</span>
+                      </li>
+                      <li class="interview__tl-item">
+                        <span class="interview__time">00:00</span>
+                        <span class="interview__task">テキスト</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 04 レセプション・物販 -->
+            <div class="interview__item">
+              <div class="interview__sep"></div>
+              <button
+                class="interview__header js-accordion"
+                aria-expanded="false"
+              >
+                <div class="interview__closed">
+                  <div class="interview__label">
+                    <span class="interview__label-main">interview</span>
+                    <span class="interview__label-num">04</span>
+                  </div>
+                  <div class="interview__closed-content">
+                    <img src="./img/accordion-icon04.jpg" alt="" class="interview__thumb">
+                    <div class="interview__closed-info">
+                      <p class="interview__closed-role">レセプション・物販</p>
+                      <p class="interview__closed-en">Reception＆Sales</p>
+                      <p class="interview__closed-date">2008年入社</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="interview__info">
+                  <div class="interview__label">
+                    <span class="interview__label-main">interview</span>
+                    <span class="interview__label-num">04</span>
+                  </div>
+                  <p class="interview__role">レセプション・物販</p>
+                  <div class="interview__meta">
+                    <span>Reception＆Sales</span>
+                    <span class="interview__meta-sep">/</span>
+                    <span>2008年入社</span>
+                  </div>
+                  <p class="interview__name">氏名 テキスト</p>
+                </div>
+                <span class="interview__icon" aria-hidden="true">
+                  <img
+                    src="./img/hamburder-bg-lt.svg"
+                    alt=""
+                    class="interview__icon-deco interview__icon-deco--lt"
+                    aria-hidden="true"
+                  />
+                  <img
+                    src="./img/hamburder-bg-rb.svg"
+                    alt=""
+                    class="interview__icon-deco interview__icon-deco--rb"
+                    aria-hidden="true"
+                  />
+                </span>
+              </button>
+              <div class="interview__body">
+                <div class="interview__photo">
+                  <img src="./img/interview04-01.jpg" alt="" />
+                </div>
+                <div class="interview__inner inner">
+                  <div class="interview__qa">
+                    <div class="interview__qa-item">
+                      <h3 class="interview__q">入社を決めたきっかけ</h3>
+                      <p class="interview__a">
+                        テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+                      </p>
+                    </div>
+                    <div class="interview__qa-item">
+                      <h3 class="interview__q">
+                        入社に感じたギャップや苦労したこと
+                      </h3>
+                      <p class="interview__a">
+                        テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+                      </p>
+                    </div>
+                    <div class="interview__qa-item">
+                      <h3 class="interview__q">今後のキャリアプランや夢</h3>
+                      <p class="interview__a">
+                        テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+                      </p>
+                    </div>
+                  </div>
+                  <div class="interview__photo2">
+                    <img src="./img/interview04-02.jpg" alt="" />
+                  </div>
+                  <div class="interview__schedule">
+                    <div class="interview__schedule-head">
+                      <span class="interview__schedule-en">ONE DAY</span>
+                      <p class="interview__schedule-title">勤務スケジュール</p>
+                    </div>
+                    <ul class="interview__timeline">
+                      <li class="interview__tl-item">
+                        <span class="interview__time">00:00</span>
+                        <span class="interview__task">テキスト</span>
+                      </li>
+                      <li class="interview__tl-item">
+                        <span class="interview__time">00:00</span>
+                        <span class="interview__task">テキスト</span>
+                      </li>
+                      <li class="interview__tl-item">
+                        <span class="interview__time">00:00</span>
+                        <span class="interview__task">テキスト</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 05 料理長 -->
+            <div class="interview__item">
+              <div class="interview__sep"></div>
+              <button
+                class="interview__header js-accordion"
+                aria-expanded="false"
+              >
+                <div class="interview__closed">
+                  <div class="interview__label">
+                    <span class="interview__label-main">interview</span>
+                    <span class="interview__label-num">05</span>
+                  </div>
+                  <div class="interview__closed-content">
+                    <img src="./img/accordion-icon05.jpg" alt="" class="interview__thumb">
+                    <div class="interview__closed-info">
+                      <p class="interview__closed-role">料理長</p>
+                      <p class="interview__closed-en">Head chef</p>
+                      <p class="interview__closed-date">2000年途中入社</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="interview__info">
+                  <div class="interview__label">
+                    <span class="interview__label-main">interview</span>
+                    <span class="interview__label-num">05</span>
+                  </div>
+                  <p class="interview__role">料理長</p>
+                  <div class="interview__meta">
+                    <span>Head chef</span>
+                    <span class="interview__meta-sep">/</span>
+                    <span>2000年途中入社</span>
+                  </div>
+                  <p class="interview__name">氏名 テキスト</p>
+                </div>
+                <span class="interview__icon" aria-hidden="true">
+                  <img
+                    src="./img/hamburder-bg-lt.svg"
+                    alt=""
+                    class="interview__icon-deco interview__icon-deco--lt"
+                    aria-hidden="true"
+                  />
+                  <img
+                    src="./img/hamburder-bg-rb.svg"
+                    alt=""
+                    class="interview__icon-deco interview__icon-deco--rb"
+                    aria-hidden="true"
+                  />
+                </span>
+              </button>
+              <div class="interview__body">
+                <div class="interview__photo">
+                  <img src="./img/interview05-01.jpg" alt="" />
+                </div>
+                <div class="interview__inner inner">
+                  <div class="interview__qa">
+                    <div class="interview__qa-item">
+                      <h3 class="interview__q">入社を決めたきっかけ</h3>
+                      <p class="interview__a">
+                        テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+                      </p>
+                    </div>
+                    <div class="interview__qa-item">
+                      <h3 class="interview__q">
+                        入社に感じたギャップや苦労したこと
+                      </h3>
+                      <p class="interview__a">
+                        テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+                      </p>
+                    </div>
+                    <div class="interview__qa-item">
+                      <h3 class="interview__q">今後のキャリアプランや夢</h3>
+                      <p class="interview__a">
+                        テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+                      </p>
+                    </div>
+                  </div>
+                  <div class="interview__photo2">
+                    <img src="./img/interview05-02.jpg" alt="" />
+                  </div>
+                  <div class="interview__schedule">
+                    <div class="interview__schedule-head">
+                      <span class="interview__schedule-en">ONE DAY</span>
+                      <p class="interview__schedule-title">勤務スケジュール</p>
+                    </div>
+                    <ul class="interview__timeline">
+                      <li class="interview__tl-item">
+                        <span class="interview__time">00:00</span>
+                        <span class="interview__task">テキスト</span>
+                      </li>
+                      <li class="interview__tl-item">
+                        <span class="interview__time">00:00</span>
+                        <span class="interview__task">テキスト</span>
+                      </li>
+                      <li class="interview__tl-item">
+                        <span class="interview__time">00:00</span>
+                        <span class="interview__task">テキスト</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 06 支配人 -->
+            <div class="interview__item">
+              <div class="interview__sep"></div>
+              <button
+                class="interview__header js-accordion"
+                aria-expanded="false"
+              >
+                <div class="interview__closed">
+                  <div class="interview__label">
+                    <span class="interview__label-main">interview</span>
+                    <span class="interview__label-num">06</span>
+                  </div>
+                  <div class="interview__closed-content">
+                    <img src="./img/accordion-icon06.jpg" alt="" class="interview__thumb">
+                    <div class="interview__closed-info">
+                      <p class="interview__closed-role">支配人</p>
+                      <p class="interview__closed-en">Manager</p>
+                      <p class="interview__closed-date">2010年入社</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="interview__info">
+                  <div class="interview__label">
+                    <span class="interview__label-main">interview</span>
+                    <span class="interview__label-num">06</span>
+                  </div>
+                  <p class="interview__role">支配人</p>
+                  <div class="interview__meta">
+                    <span>Manager</span>
+                    <span class="interview__meta-sep">/</span>
+                    <span>2010年入社</span>
+                  </div>
+                  <p class="interview__name">氏名 テキスト</p>
+                </div>
+                <span class="interview__icon" aria-hidden="true">
+                  <img
+                    src="./img/hamburder-bg-lt.svg"
+                    alt=""
+                    class="interview__icon-deco interview__icon-deco--lt"
+                    aria-hidden="true"
+                  />
+                  <img
+                    src="./img/hamburder-bg-rb.svg"
+                    alt=""
+                    class="interview__icon-deco interview__icon-deco--rb"
+                    aria-hidden="true"
+                  />
+                </span>
+              </button>
+              <div class="interview__body">
+                <div class="interview__photo">
+                  <img src="./img/interview06-01.jpg" alt="" />
+                </div>
+                <div class="interview__inner inner">
+                  <div class="interview__qa">
+                    <div class="interview__qa-item">
+                      <h3 class="interview__q">入社を決めたきっかけ</h3>
+                      <p class="interview__a">
+                        テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+                      </p>
+                    </div>
+                    <div class="interview__qa-item">
+                      <h3 class="interview__q">
+                        入社に感じたギャップや苦労したこと
+                      </h3>
+                      <p class="interview__a">
+                        テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+                      </p>
+                    </div>
+                    <div class="interview__qa-item">
+                      <h3 class="interview__q">今後のキャリアプランや夢</h3>
+                      <p class="interview__a">
+                        テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+                      </p>
+                    </div>
+                  </div>
+                  <div class="interview__photo2">
+                    <img src="./img/interview06-02.jpg" alt="" />
+                  </div>
+                  <div class="interview__schedule">
+                    <div class="interview__schedule-head">
+                      <span class="interview__schedule-en">ONE DAY</span>
+                      <p class="interview__schedule-title">勤務スケジュール</p>
+                    </div>
+                    <ul class="interview__timeline">
+                      <li class="interview__tl-item">
+                        <span class="interview__time">00:00</span>
+                        <span class="interview__task">テキスト</span>
+                      </li>
+                      <li class="interview__tl-item">
+                        <span class="interview__time">00:00</span>
+                        <span class="interview__task">テキスト</span>
+                      </li>
+                      <li class="interview__tl-item">
+                        <span class="interview__time">00:00</span>
+                        <span class="interview__task">テキスト</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          <div class="interview__sep"></div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+      S05_DATA_INFO：環境とデータ
+    ============================================================ -->
+        <div class="data-info__collage inner">
+          <img src="./img/info-top.jpg" alt="" />
+        </div>
+        <section class="data-info" id="data-info">
+          <div class="inner">
+          <div class="data-info__heading">
+            <h2 class="section-h2 section-h2--opacity">
+              DATA<span class="section-h2__amp">＆</span>INFO
+            </h2>
+            <p class="section-h2-sub">環境とデータ</p>
+          </div>
+
+          <!-- 業界比較 -->
+          <div class="data-info__block">
+            <div class="data-info__sub-head">
+              <span class="data-info__label-en">INDUSTRY COMPARISON</span>
+              <p class="data-info__label-jp">中条商事 × 飲食業界平均</p>
+            </div>
+            <div class="data-info__img">
+              <img
+                src="./img/info-cards.jpg"
+                alt="中条商事と飲食業界平均の比較"
+              />
+            </div>
+            <p class="data-info__note">※ 業界平均値は厚労省「雇用動向調査」「就労条件総合調査」、経産省「外食産業実態調査」、⺠間調査求人@飲食店.COM、 OpenWork、 エン・ジャパン等を参考に整理した概数値。中条商事実績はマイナビ2027 掲載値2024年度</p>
+          </div>
+
+          <!-- 福利厚生 -->
+          <div class="data-info__block data-info__block--benefit">
+            <div class="data-info__sub-head">
+              <span class="data-info__label-en">BENEFIT</span>
+              <p class="data-info__label-jp">主な福利厚生</p>
+            </div>
+            <div class="data-info__img">
+              <img src="./img/benefit-cards.jpg" alt="主な福利厚生" />
+            </div>
+          </div>
+        </div>
+          <div class="data-info__benefit-collage">
+            <img src="./img/data-top.jpg" alt="" />
+          </div>
+
+        <!-- 数字で見る中条商事 -->
+        <div class="data-info__block data-info__block--numbers">
+            <div class="data-info__sub-head inner">
+              <span class="data-info__label-en">DATA</span>
+              <p class="data-info__label-jp">数字で見る中条商事</p>
+            </div>
+            <div class="data-info__img">
+              <img src="./img/data-cards.jpg" alt="数字で見る中条商事" />
+            </div>
+          </div>
+      </section>
+
+      <!-- ============================================================
+      S07_STORE：店舗情報（各店舗スライダー）
+    ============================================================ -->
+      <section class="store" id="store">
+          <div class="store__heading inner">
+            <h2 class="section-h2">STORE<br />INFORMATION</h2>
+            <p class="section-h2-sub">店舗情報</p>
+          </div>
+
+          <div class="store__groups">
+            <!-- グループ1：レストラン東京7店舗 -->
+            <div class="store__group">
+              <div class="store__group-head inner">
+                <div class="store__group-accent"></div>
+                <p class="store__group-name">レストラン 7店舗（東京）</p>
+              </div>
+              <div class="store__group-line"></div>
+              <div class="swiper store__swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="store__slide">
+                      <div class="store__slide-img">
+                        <img src="./img/store-roppongi.jpg" alt="六本木店" />
+                      </div>
+                      <p class="store__slide-name">
+                        六本木店／東京都港区
+                      </p>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="store__slide">
+                      <div class="store__slide-img">
+                        <img src="./img/store-mita.jpg" alt="三田店" />
+                      </div>
+                      <p class="store__slide-name">三田店／東京都港区</p>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="store__slide">
+                      <div class="store__slide-img">
+                        <img src="./img/store-ichigaya.jpg" alt="市ヶ谷店" />
+                      </div>
+                      <p class="store__slide-name">市ヶ谷店／東京都千代田区</p>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="store__slide">
+                      <div class="store__slide-img">
+                        <img src="./img/store-fureika.jpg" alt="富麗華" />
+                      </div>
+                      <p class="store__slide-name">富麗華／東京都港区</p>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="store__slide">
+                      <div class="store__slide-img">
+                        <img src="./img/store-shigyokuran.jpg" alt="紫玉蘭" />
+                      </div>
+                      <p class="store__slide-name">紫玉蘭／東京都港区</p>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="store__slide">
+                      <div class="store__slide-img">
+                        <img src="./img/store-kurawan.jpg" alt="倶楽湾" />
+                      </div>
+                      <p class="store__slide-name">倶楽湾／東京都港区</p>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="store__slide">
+                      <div class="store__slide-img">
+                        <img src="./img/store-kohakukyu.jpg" alt="琥珀宮" />
+                      </div>
+                      <p class="store__slide-name">琥珀宮／東京都千代田区</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+
+            <!-- グループ2：レストラン名古屋・軽井沢3店舗 -->
+            <div class="store__group">
+              <div class="store__group-head inner">
+                <div class="store__group-accent"></div>
+                <p class="store__group-name">
+                  レストラン 3店舗（名古屋/軽井沢）
+                </p>
+              </div>
+              <div class="store__group-line"></div>
+              <div class="swiper store__swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="store__slide">
+                      <div class="store__slide-img">
+                        <img src="./img/store-reiho.jpg" alt="麗穂" />
+                      </div>
+                      <p class="store__slide-name store__slide-name--first">
+                        麗穂／愛知県名古屋市
+                      </p>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="store__slide">
+                      <div class="store__slide-img">
+                        <img src="./img/store-shunju.jpg" alt="春秋" />
+                      </div>
+                      <p class="store__slide-name">春秋／愛知県名古屋市</p>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="store__slide">
+                      <div class="store__slide-img">
+                        <img src="./img/store-reisho.jpg" alt="麗晶" />
+                      </div>
+                      <p class="store__slide-name">麗晶／長野県軽井沢</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+
+            <!-- グループ3：物販/パティスリー/バー5店舗 -->
+            <div class="store__group">
+              <div class="store__group-head inner">
+                <div class="store__group-accent"></div>
+                <p class="store__group-name">物販/パティスリー/バー 5店舗</p>
+              </div>
+              <div class="store__group-line"></div>
+              <div class="swiper store__swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="store__slide">
+                      <div class="store__slide-img">
+                        <img src="./img/store-fureika-shinjuku.jpg" alt="富麗華 伊勢丹新宿店" />
+                      </div>
+                      <p class="store__slide-name store__slide-name--first">
+                        富麗華 伊勢丹新宿店
+                      </p>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="store__slide">
+                      <div class="store__slide-img">
+                        <img
+                          src="./img/store-fureika-kitchen.jpg"
+                          alt="富麗華キッチン麻布台ヒルズ"
+                        />
+                      </div>
+                      <p class="store__slide-name">
+                        富麗華キッチン麻布台ヒルズ
+                      </p>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="store__slide">
+                      <div
+                        class="store__slide-img store__slide-img--placeholder"
+                      ></div>
+                      <p class="store__slide-name">富麗華キッチン銀座三越店</p>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="store__slide">
+                      <div
+                        class="store__slide-img store__slide-img--placeholder"
+                      ></div>
+                      <p class="store__slide-name">PORT SINCERE</p>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="store__slide">
+                      <div
+                        class="store__slide-img store__slide-img--placeholder"
+                      ></div>
+                      <p class="store__slide-name">BAR 蒼</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+          </div>
+      </section>
+
+      <!-- ============================================================
+      S06_JOB：募集要項
+    ============================================================ -->
+    <div class="job__top-img inner">
+      <img src="./img/job-desc-top.png" alt="" />
+    </div>
+      <section class="job" id="job">
+        <div class="inner">
+          <div class="job__heading">
+            <h2 class="section-h2 section-h2--opacity">JOB<br />DESCRIPTION</h2>
+            <p class="section-h2-sub">募集要項</p>
+          </div>
+
+          <div class="job__table">
+            <div class="job__sep"></div>
+            <div class="job__row">
+              <p class="job__label">募集職種</p>
+              <p class="job__content">
+                中国飯店メイン　各店舗<br />ホール、レセプション、キッチン（中国料理、点心）、パティシエ、販売スタッフ
+              </p>
+            </div>
+            <div class="job__sep"></div>
+            <div class="job__row">
+              <p class="job__label">応募資格</p>
+              <p class="job__content">
+                2027年3月までに四年制大学・短大・専門学校を卒業見込みの方
+              </p>
+            </div>
+            <div class="job__sep"></div>
+            <div class="job__row">
+              <p class="job__label">初任給</p>
+              <p class="job__content">月給 273,000〜400,000円</p>
+            </div>
+            <div class="job__sep"></div>
+            <div class="job__row">
+              <p class="job__label">勤務地</p>
+              <p class="job__content">
+                東京都内7店舗／軽井沢1店舗／名古屋2店舗<br />※エリアごとの採用となります
+              </p>
+            </div>
+            <div class="job__sep"></div>
+            <div class="job__row">
+              <p class="job__label">諸手当</p>
+              <p class="job__content">
+                交通費（月2万円迄）、食事手当（賄い無料）、寮制度、社割制度など
+              </p>
+            </div>
+            <div class="job__sep"></div>
+            <div class="job__row">
+              <p class="job__label">休日休暇</p>
+              <p class="job__content">
+                週休2日（年間休日107日）、年末年始休暇、有給休暇取得実績18日
+              </p>
+            </div>
+            <div class="job__sep"></div>
+          </div>
+
+          <!-- 選考フロー -->
+          <div class="job__flow inner">
+            <div class="job__flow-inner">
+              <div class="job__flow-head">
+                <span class="job__flow-label">FLOW</span>
+                <p class="job__flow-title">選考フロー</p>
+              </div>
+            <ul class="job__flow-list">
+              <li class="job__flow-item">
+                <div class="job__flow-num">1</div>
+                <p class="job__flow-text">エントリー</p>
+              </li>
+              <li class="job__flow-item">
+                <div class="job__flow-num">2</div>
+                <p class="job__flow-text">会社説明会</p>
+              </li>
+              <li class="job__flow-item">
+                <div class="job__flow-num">3</div>
+                <p class="job__flow-text">書類選考</p>
+              </li>
+              <li class="job__flow-item">
+                <div class="job__flow-num">4</div>
+                <p class="job__flow-text">面接（複数回）</p>
+              </li>
+              <li class="job__flow-item">
+                <div class="job__flow-num">5</div>
+                <p class="job__flow-text">内定</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+      コラージュセクション（JOBとENTRYの間）
+    ============================================================ -->
+      <section class="collage">
+        <img src="./img/entry-top.jpg" alt="" />
+      </section>
+    </div>
+    </div>
+      <!-- ============================================================
+      ENTRY & DOWNLOAD：ご応募・資料請求
+    ============================================================ -->
+      <section class="entry" id="entry">
+        <div class="entry__bg">
+          <img src="./img/entry-bg.jpg" alt="" class="sp" />
+          <img src="./img/entry-bg-pc.jpg" alt="" class="pc" />
+        </div>
+        <div class="entry__inner inner">
+          <div class="entry__heading">
+            <h2 class="entry__h2">
+              ENTRY<span class="entry__amp">&amp;</span><br>DOWNLOAD
+            </h2>
+            <p class="entry__h2-sub">ご応募／資料請求</p>
+          </div>
+          <div class="entry__cta">
+            <p class="entry__cta-text">
+              説明会・セミナー情報・<br />応募はこちら
+            </p>
+            <div class="entry__btns">
+              <a href="#" class="entry__btn">
+                <img
+                  src="./img/mynavi-2027.svg"
+                  alt="マイナビ2027"
+                  class="entry__btn-logo"
+                />
+              </a>
+              <a href="#" class="entry__btn">
+                <img
+                  src="./img/mynavi-2028.svg"
+                  alt="マイナビ2028"
+                  class="entry__btn-logo"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+      ダウンロードセクション
+    ============================================================ -->
+      <section class="download" id="download">
+        <div class="download__bg">
+          <img src="./img/download-bg.jpg" alt="" class="sp" />
+          <img src="./img/download-bg-pc.jpg" alt="" class="pc" />
+        </div>
+        <div class="download__inner inner">
+          <p class="download__text">パンフレットの<br />ダウンロードはこちら</p>
+          <div class="download__pamphlet">
+            <img
+              src="./img/download-image.jpg"
+              alt="パンフレット"
+              class="download__pamphlet-img"
+            />
+          </div>
+          <a href="#" class="download__btn">
+            <img
+              src="./img/footer-download-cta-bg.svg"
+              alt=""
+              class="download__btn-bg"
+            />
+            <span class="download__btn-text">ダウンロードする</span>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <!-- ============================================================
+    S10_FOOTER
+  ============================================================ -->
+    <footer class="footer">
+      <div class="footer__inner">
+        <img src="./img/logo-white.png" alt="中条商事" class="footer__logo" />
+        <p class="footer__copy">
+          &copy; 2026 Nakajou Shoji Co., Ltd. All Rights Reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/gsap.js"></script>
+  </body>
+</html>

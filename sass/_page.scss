@@ -1,0 +1,1786 @@
+.pc-content-bg {
+  @include mq(md) {
+    background: $gray;
+    padding-top: rem(209);
+    padding-bottom: rem(75);
+  }
+
+  @include mq(lg) {
+    display: grid;
+    grid-template-columns: rem(276) rem(375) rem(276);
+    gap: linear_func_clamp(1920,136,1024,30);
+    align-items: start;
+    justify-content: center;
+  }
+}
+
+.pc-content-wrapper {
+  @include mq(md) {
+    width: rem(375);
+    margin: 0 auto;
+  }
+
+  @include mq(lg) {
+    grid-column: 2;
+    grid-row: 1;
+    width: auto;
+    margin: 0;
+  }
+}
+
+// ============================================================
+// PC サイドバー左（ナビ）
+// ============================================================
+.pc-side-nav {
+  display: none;
+
+  @include mq(lg) {
+    display: flex;
+    flex-direction: column;
+    grid-column: 1;
+    grid-row: 1;
+    align-self: start;
+    position: sticky;
+    top: rem(150);
+    z-index: 80;
+  }
+}
+
+.pc-side-nav__list {
+  list-style: none;
+}
+
+.pc-side-nav__list li:first-child .pc-side-nav__link {
+  padding-top: 0;
+}
+
+.pc-side-nav__link {
+  display: grid;
+  grid-template-columns: rem(30) 1fr;
+  grid-template-rows: auto auto;
+  column-gap: rem(6);
+  padding: rem(20) 0;
+  text-decoration: none;
+  border-bottom: 0.5px solid #898989;
+}
+
+.pc-side-nav__num {
+  grid-row: 1 / 3;
+  font-family: $mincho;
+  @include font(12, 19.2, null, $regular);
+  padding: rem(5) rem(17) rem(5) 0;
+  color: #927010;
+}
+
+.pc-side-nav__jp {
+  font-family: $mincho;
+  @include font(18, 28.8, 40, $regular);
+  color: $dark-gray;
+}
+
+.pc-side-nav__en {
+  font-family: $en;
+  @include font(12, 16.8, 200, $regular);
+  color: #927010;
+  padding-top: rem(5);
+}
+
+.pc-side-nav__cta {
+  display: flex;
+  flex-direction: column;
+  gap: rem(20);
+  padding: rem(45) 0;
+}
+
+.pc-side-nav__btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: rem(68);
+  text-decoration: none;
+  overflow: hidden;
+}
+
+.pc-side-nav__btn-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+.pc-side-nav__btn-text {
+  position: relative;
+  z-index: 1;
+  font-family: $mincho;
+  @include font(18, 28.8, null, $bold);
+  color: #927010;
+}
+
+.pc-side-nav__btn--dl .pc-side-nav__btn-text {
+  color: $white;
+}
+
+// ============================================================
+// PC サイドバー右（ロゴ）
+// ============================================================
+.pc-side-logo {
+  display: none;
+
+  @include mq(lg) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-column: 3;
+    grid-row: 1;
+    align-self: start;
+    position: sticky;
+    top: rem(100);
+    z-index: 80;
+    padding-top: rem(337);
+  }
+}
+
+.pc-side-logo__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: rem(12);
+}
+
+.pc-side-logo__img {
+  width: rem(138);
+}
+
+.pc-side-logo__name {
+  font-family: $en;
+  @include font(20, 32, null, $regular);
+}
+
+// ============================================================
+// ヘッダー
+// ============================================================
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: rem(75);
+  background: $gray;
+  z-index: 100;
+
+  @include mq("md") {
+    height: rem(100);
+  }
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  padding: 0 rem(20);
+
+  @include mq("md") {
+    padding: 0 rem(25);
+    max-width: 1250px;
+    margin: 0 auto;
+  }
+}
+
+.header__logo {
+  display: block;
+  width: rem(69);
+  flex-shrink: 0;
+
+  @include mq("md") {
+    width: rem(138);
+  }
+}
+
+.header__logo img {
+  width: 100%;
+}
+
+.header__nav {
+  display: none;
+
+  @include mq(1250) {
+    display: flex;
+    flex: 1;
+   justify-content: right;
+   padding-right: rem(17);
+  }
+}
+
+.header__nav-list {
+  display: flex;
+  align-items: center;
+  gap: rem(17);
+  list-style: none;
+}
+
+.header__nav-list a {
+  text-decoration: none;
+  font-family: $mincho;
+  @include font(15, 24, 40, $regular);
+  color: $dark-gray;
+  transition: opacity 0.3s ease;
+}
+
+.header__nav-list a:hover {
+  opacity: 0.65;
+}
+
+.header__actions {
+  display: flex;
+  align-items: center;
+  gap: rem(17);
+}
+
+.header__cta-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: rem(117);
+  height: rem(41);
+  text-decoration: none;
+
+  @include mq(1250) {
+    display: none;
+  }
+}
+
+html.is-fixed .header__cta-btn {
+  display: none;
+}
+
+.header__cta-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+.header__cta-text {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 1px;
+  font-family: $en;
+  @include font(16, 25.6, null, $medium);
+  color: $dark-gray;
+}
+
+.header__cta-sep {
+  @include font(12, 19.2, null, $medium);
+}
+
+.header__pc-btn {
+  display: none;
+
+  @include mq(1250) {
+    text-decoration: none;
+    @include font(16, 25.6, null, $bold);
+    transition: opacity 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: rem(46);
+    padding: rem(10);
+    white-space: nowrap;
+    position: relative;
+  }
+}
+
+.header-pc-btn__bg{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.header__pc-btn:hover {
+  opacity: 0.75;
+}
+
+.header__pc-btn--outline {
+  color: $gold;
+  width: rem(188);
+}
+
+.header__pc-btn--fill {
+  color: $white;
+  width: rem(268);
+}
+
+.header__hamburger {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: rem(40);
+  height: rem(40);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  flex-shrink: 0;
+
+  @include mq(1250) {
+    display: none;
+  }
+}
+
+.header__hamburger-deco--lt {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: rem(29);
+  height: rem(31);
+  pointer-events: none;
+}
+
+.header__hamburger-deco--rb {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: rem(29);
+  height: rem(31);
+  pointer-events: none;
+}
+
+.header__hamburger-lines {
+  display: flex;
+  flex-direction: column;
+  gap: rem(7.5);
+}
+
+.header__hamburger-lines span {
+  display: block;
+  width: rem(22);
+  height: 0.5px;
+  background: $dark-gray;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  transform-origin: center;
+}
+
+.header__hamburger.is-open .header__hamburger-lines span:nth-child(1) {
+  transform: translateY(rem(4)) rotate(-40deg);
+  width: rem(14.5);
+  height: 1px;
+}
+
+.header__hamburger.is-open .header__hamburger-lines span:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.header__hamburger.is-open .header__hamburger-lines span:nth-child(3) {
+  transform: translateY(rem(-3)) rotate(40deg);
+  width: rem(14.5);
+  height: 1px;
+}
+
+// ============================================================
+// ドロワーメニュー
+// ============================================================
+.drawer {
+  position: fixed;
+  top: rem(75);
+  left: 0;
+  width: 100%;
+  height: calc(100% - #{rem(75)});
+  z-index: 200;
+  visibility: hidden;
+  pointer-events: none;
+
+  @include mq("md") {
+    top: rem(100);
+    height: calc(100% - #{rem(100)});
+  }
+
+  @include mq(1250) {
+    display: none;
+  }
+}
+
+.drawer.is-open {
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.drawer.is-open .drawer__overlay {
+  opacity: 1;
+}
+
+.drawer__body {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: $gray;
+  transform: translateX(100%);
+  transition: transform 0.35s ease;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: rem(15.5);
+}
+
+.drawer.is-open .drawer__body {
+  transform: translateX(0);
+}
+
+.drawer__nav {
+  padding-top: rem(37);
+}
+
+.drawer__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  width: per(375, 276);
+  margin: 0 auto;
+  max-width: rem(500);
+}
+
+.drawer__link {
+  display: grid;
+  grid-template-columns: rem(30) 1fr;
+  grid-template-rows: auto auto;
+  column-gap: rem(6);
+  padding: rem(20) 0;
+  text-decoration: none;
+  border-bottom: 0.5px solid #898989;
+}
+
+.drawer__list li:first-child .drawer__link {
+  padding-top: 0;
+}
+
+.drawer__num {
+  grid-row: 1 / 3;
+  font-family: $mincho;
+  @include font(12, 19.2, null, $regular);
+  padding: rem(5) rem(17) rem(5) 0;
+  color: #927010;
+}
+
+.drawer__jp {
+  font-family: $mincho;
+  @include font(18, 28.8, 40, $regular);
+  color: $dark-gray;
+}
+
+.drawer__en {
+  font-family: $en;
+  @include font(12, 16.8, 200, $regular);
+  color: #927010;
+  padding-top: rem(5);
+}
+
+.drawer__cta {
+  display: flex;
+  flex-direction: column;
+  gap: rem(20);
+  padding: rem(45) 0;
+}
+
+.drawer__cta-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: rem(276);
+  height: rem(68);
+  text-decoration: none;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.drawer__cta-btn-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+.drawer__cta-btn-text {
+  position: relative;
+  z-index: 1;
+  font-family: $mincho;
+  @include font(18, 28.8, null, $bold);
+  color: #927010;
+}
+
+.drawer__cta-btn--dl .drawer__cta-btn-text {
+  color: $white;
+}
+
+.drawer__copy {
+  text-align: center;
+  font-family: $en;
+  @include font(20, 32, null, $regular);
+}
+
+html.is-fixed {
+  overflow: hidden;
+}
+
+// ============================================================
+// S02_MV：ファーストビュー
+// ============================================================
+.mv {
+  position: relative;
+  height: rem(767);
+  overflow: hidden;
+
+  @include mq("md") {
+    height: rem(1069);
+  }
+}
+
+.mv__swiper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.mv__swiper .swiper-wrapper {
+  height: 100%;
+}
+
+.mv__swiper .swiper-slide {
+  height: 100%;
+  overflow: hidden;
+}
+
+.mv__swiper img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-position: center top;
+  object-fit: cover;
+}
+
+.mv__content {
+  position: absolute;
+  width: 100%;
+  top: rem(435);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: rem(20);
+
+  @include mq("md") {
+    top: 57%;
+    gap: rem(33);
+  }
+}
+
+.mv__title {
+  font-family: $mincho;
+  @include font(38, 45.6, 100, $semi);
+  text-shadow: 0 0 10px #000;
+  color: $white;
+  text-align: center;
+
+  @include mq("md") {
+    @include font(68, 81.6);
+  }
+}
+
+.mv__sub {
+  font-family: $en;
+  @include font(16, 19.2, null, $light);
+  color: $white;
+  text-align: center;
+
+  @include mq("md") {
+    @include font(28, 33.6);
+  }
+}
+
+.mv__scroll {
+  position: absolute;
+  bottom: rem(13);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+
+  @include mq('md'){
+    bottom: rem(9.5);
+  }
+}
+
+.mv__scroll-line {
+  width: 1px;
+  height: rem(44);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.6) 0%,
+    rgba(172, 141, 56, 0.6) 100%
+  );
+  animation: scrollLine 2s ease infinite;
+  transform-origin: top center;
+
+  @include mq('md'){
+    height: rem(121);
+  }
+}
+
+.mv__scroll-text {
+  font-family: $en;
+  @include font(12, 19.2, null, $light);
+  color: #e4d2a2;
+  text-shadow: 0 0 16.741px #000;
+
+  @include mq('md'){
+    @include font(18,28.8);
+  }
+}
+
+@keyframes scrollLine {
+  0% {
+    transform: scaleY(0);
+    opacity: 1;
+  }
+  50% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scaleY(1);
+    opacity: 0;
+  }
+}
+
+// ============================================================
+// ページ本体のオフセット（MVの下から始まるセクション用）
+// ============================================================
+.main {
+  padding-top: rem(75);
+
+  @include mq("md") {
+    padding-top: rem(92);
+  }
+}
+
+// ============================================================
+// S03_MESSAGE：代表メッセージ
+// ============================================================
+.message {
+  position: relative;
+  overflow: hidden;
+}
+
+.message__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.message__bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.message__inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: rem(30);
+  padding-top: rem(37);
+  padding-left: rem(40);
+  padding-right: rem(40);
+  padding-bottom: rem(68);
+
+  @include mq("md") {
+    padding-top: rem(150);
+    padding-left: rem(40);
+    padding-right: rem(40);
+    padding-bottom: rem(293);
+    max-width: 674px;
+    margin-inline: auto;
+  }
+}
+
+.message__heading-block {
+  width: 100%;
+
+  @include mq('md'){
+    text-align: center;
+  }
+}
+
+.message__en {
+  display: block;
+  font-family: $en;
+  @include font(48, 48, null, $light);
+  color: rgba(255, 255, 255, 0.9);
+
+  @include mq("md") {
+    @include font(100, 100);
+  }
+}
+
+.message__ja {
+  display: block;
+  font-family: $mincho;
+  @include font(16, 25.6, 100, 400);
+  color: $white;
+
+  @include mq("md") {
+    @include font(23, 36.8, 100, $semi);
+  }
+}
+
+.message__body {
+  width: 100%;
+  font-family: $mincho;
+  text-shadow: 0 0 10px #000;
+  @include font(16, 32, 100, $semi);
+  color: $white;
+
+  @include mq("md") {
+    @include font(20, 40);
+    text-align: center;
+  }
+}
+
+.message__body p + p{
+    @include mq('md'){
+        margin-top: rem(40);
+    }
+}
+
+.message__sign {
+  display: flex;
+  align-items: flex-start;
+  gap: rem(30);
+
+  &::before {
+    content: "";
+    display: block;
+    margin-top: rem(-9);
+    width: 1px;
+    height: rem(44);
+    transform: rotate(-90deg);
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.6) 0%,
+      rgba(172, 141, 56, 0.6) 100%
+    );
+
+    @include mq('md'){
+        height: rem(86);
+        margin-top: rem(-27);
+    }
+  }
+
+  @include mq('md'){
+    gap: rem(55);
+  }
+}
+
+.message__sign-text {
+  font-family: $mincho;
+  @include font(16, 24, null, $semi);
+  color: $white;
+  text-shadow: 0 0 10px #000;
+  text-align: left;
+
+  @include mq("md") {
+    @include font(20, 30);
+  }
+}
+
+// ============================================================
+// セクション共通 H2
+// ============================================================
+.section-h2 {
+  font-family: $en;
+  color: $black;
+  @include font(48, 48, null, $medium);
+}
+
+.section-h2__amp {
+  font-family: $serif;
+  opacity: 0.9;
+  @include font(38, 38, null, $regular);
+}
+
+.section-h2-sub {
+  @include font(16, 25.6, null, $regular);
+  color: #484848;
+}
+
+// ============================================================
+// S04_INTERVIEW：先輩社員の声
+// ============================================================
+
+.interview__top-img {
+  width: 100%;
+
+  @include mq(lg) {
+    width: rem(375);
+    margin: 0 auto;
+  }
+}
+
+.interview__top-img img {
+  width: 100%;
+  height: auto;
+}
+
+.interview {
+  background: $white;
+  padding-top: rem(20);
+}
+
+.interview__heading {
+  @include mq("md") {
+    max-width: rem(500);
+    padding-left: rem(20);
+    padding-right: rem(20);
+  }
+}
+
+.interview__list {
+  margin-top: rem(40);
+}
+
+.interview__sep {
+  width: 100%;
+  height: 1px;
+  background: #ddd;
+}
+
+.interview__header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: rem(24) rem(20);
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+}
+
+/* 閉じている時のヘッダーコンテンツ */
+.interview__closed {
+  padding-right: rem(10);
+  min-width: 0;
+}
+
+.interview__closed-content {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  gap: rem(10);
+  padding-top: rem(10);
+}
+
+.interview__thumb {
+  width: rem(94);
+  flex-shrink: 0;
+}
+
+.interview__closed-info {
+  display: flex;
+  flex-direction: column;
+  gap: rem(12);
+  min-width: 0;
+}
+
+.interview__closed-role {
+  font-family: $mincho;
+  @include font(23, 23, 100, $semi);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.interview__closed-en {
+  @include font(16, 16, 100, $regular);
+}
+
+.interview__closed-date {
+  @include font(16, 16, 100, $regular);
+}
+
+/* 開いている時：閉じコンテンツを非表示 */
+.interview__item.is-open > .interview__header > .interview__closed {
+  display: none;
+}
+
+/* 開いている時のヘッダーコンテンツ */
+.interview__info {
+  padding-right: rem(12);
+  display: none;
+  gap: rem(12);
+}
+
+.interview__item.is-open > .interview__header > .interview__info {
+  display: grid;
+  flex: 1;
+}
+
+.interview__label {
+  display: flex;
+  align-items: baseline;
+}
+
+.interview__label-main {
+  font-family: $en;
+  @include font(14, 14, null, $regular);
+  color: $red;
+  text-transform: uppercase;
+}
+
+.interview__label-num {
+  font-family: $infant;
+  @include font(14, 14, null, $regular);
+  color: $red;
+}
+
+.interview__role {
+  font-family: $mincho;
+  @include font(23, 23, 100, $semi);
+}
+
+.interview__meta {
+  display: flex;
+  align-items: center;
+  gap: rem(5);
+  @include font(16, 16, 100, $regular);
+}
+
+.interview__meta-sep {
+}
+
+.interview__name {
+  @include font(16, 16, 100, $regular);
+}
+
+.interview__icon {
+  position: relative;
+  display: block;
+  flex-shrink: 0;
+  width: rem(40);
+  height: rem(40);
+}
+
+.interview__icon-deco--lt {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: rem(29);
+  height: rem(31);
+  pointer-events: none;
+}
+
+.interview__icon-deco--rb {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: rem(29);
+  height: rem(31);
+  pointer-events: none;
+}
+
+.interview__icon::before {
+  content: "";
+  position: absolute;
+  width: rem(22);
+  height: 1px;
+  background: $red;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.interview__icon::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: rem(22);
+  background: $red;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scaleY(1);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.interview__item.is-open > .interview__header > .interview__icon::after {
+  transform: translate(-50%, -50%) scaleY(0);
+  opacity: 0;
+}
+
+.interview__body {
+  display: none;
+  overflow: hidden;
+}
+
+.interview__photo img,
+.interview__photo2 img {
+  width: 100%;
+}
+
+.interview__photo {
+}
+
+.interview__photo2 {
+  padding-top: rem(45);
+}
+
+.interview__inner {
+  padding-top: rem(24);
+  padding-bottom: rem(20);
+}
+
+.interview__qa {
+  display: flex;
+  flex-direction: column;
+  gap: rem(40);
+}
+
+.interview__q {
+  @include font(16, 16, 100, $semi);
+  color: $red;
+}
+
+.interview__a {
+  font-family: $mincho;
+  @include font(16, 32, 100, $regular);
+  margin-top: rem(16);
+}
+
+.interview__schedule {
+  margin-top: rem(75);
+  background: $gray;
+  padding: rem(59) rem(20) rem(48);
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    background: $red;
+    width: 1px;
+    height: rem(60);
+    top: rem(-30);
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.interview__schedule-head {
+  display: flex;
+  flex-direction: column;
+  gap: rem(8);
+  text-align: center;
+  color: $red;
+}
+
+.interview__schedule-en {
+  font-family: $en;
+  @include font(14, 14, null, $regular);
+}
+
+.interview__schedule-title {
+  @include font(16, 25.6, null, $semi);
+}
+
+.interview__timeline {
+  position: relative;
+  list-style: none;
+  margin-top: rem(20);
+}
+
+/* 縦線 */
+.interview__timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: rem(48);
+  width: 1px;
+  background: #debfc6;
+}
+
+.interview__tl-item {
+  display: grid;
+  grid-template-columns: rem(37) rem(23) 1fr;
+  align-items: start;
+}
+
+.interview__tl-item + .interview__tl-item {
+  margin-top: rem(20);
+}
+
+/* 各行の四角マーカー */
+.interview__tl-item::before {
+  content: "";
+  grid-column: 2;
+  grid-row: 1;
+  justify-self: center;
+  width: rem(5);
+  height: rem(5);
+  background: $red;
+  position: relative;
+  z-index: 1;
+  margin-top: rem(8);
+}
+
+.interview__time {
+  grid-column: 1;
+  grid-row: 1;
+  font-family: $serif;
+  @include font(14, 22.4, null, $bold);
+  color: $red;
+}
+
+.interview__task {
+  grid-column: 3;
+  grid-row: 1;
+  font-family: $serif;
+  @include font(14, 22.4, null, $regular);
+}
+
+// ============================================================
+// S05_DATA & INFO：環境とデータ
+// ============================================================
+
+.data-info__collage {
+  padding-top: rem(67);
+  width: 100%;
+  overflow: hidden;
+  background: $white;
+}
+
+.data-info {
+  padding-top: rem(30);
+  padding-bottom: rem(108);
+  background: $white;
+}
+
+.data-info__heading {
+}
+
+.data-info__block {
+  margin-top: rem(45);
+}
+
+.data-info__block + .data-info__block {
+  margin-top: rem(45);
+}
+
+.data-info__sub-head {
+}
+
+.data-info__label-en {
+  display: block;
+  font-family: $en;
+  @include font(14, 14, null, $regular);
+  color: $gold;
+}
+
+.data-info__block--benefit .data-info__label-en {
+  color: $red;
+}
+
+.data-info__block--numbers .data-info__label-en {
+  color: #c37938;
+}
+
+.data-info__label-jp {
+  margin-top: rem(12);
+  @include font(23, 23, 100, $semi);
+}
+
+.data-info__img {
+  margin-top: rem(30);
+}
+
+.data-info__img img {
+  width: 100%;
+  height: auto;
+}
+
+.data-info__note {
+  font-family: $serif;
+  @include font(12, 14.4, null, $light);
+  margin-top: rem(30);
+}
+
+.data-info__benefit-collage {
+  width: 100%;
+  overflow: hidden;
+  margin-top: rem(65);
+}
+
+.data-info__numbers > .inner {
+  @include mq("md") {
+    max-width: rem(500);
+    padding-left: rem(20);
+    padding-right: rem(20);
+  }
+}
+
+.data-info__numbers-head {
+  padding-top: rem(40);
+  padding-bottom: rem(24);
+}
+
+// ============================================================
+// S07_STORE：店舗情報
+// ============================================================
+.store {
+  background: $gray;
+  padding-top: rem(82);
+  padding-bottom: rem(232);
+  overflow-x: clip;
+}
+
+.store__heading {
+}
+
+.store__groups {
+  display: flex;
+  margin-top: rem(24);
+  flex-direction: column;
+  gap: rem(40);
+}
+
+.store__group-head {
+  display: flex;
+  align-items: center;
+  gap: rem(7);
+  padding-bottom: rem(4);
+}
+
+.store__group-accent {
+  width: rem(3);
+  height: rem(16);
+  background: linear-gradient(180deg, #752b35 0%, #521213 100%);
+  flex-shrink: 0;
+}
+
+.store__group-name {
+  @include font(16, 25.6, null, $regular);
+}
+
+.store__group-line {
+  width: 100%;
+  height: 1px;
+  background: #e8dec2;
+}
+
+.store__swiper {
+  width: 100%;
+  margin-left: rem(20);
+  padding-bottom: rem(12);
+  margin-top: rem(12);
+  overflow: visible;
+  overflow: hidden;
+}
+
+.store__swiper .swiper-slide {
+  width: rem(326);
+}
+
+.store__swiper .swiper-pagination {
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  padding-left: rem(20);
+}
+
+.store__swiper .swiper-pagination-bullet {
+  width: rem(4);
+  height: rem(4);
+  background: rgba(201, 168, 76, 0.30);
+  opacity: 1;
+  transition: background 0.3s ease;
+  border-radius: 0;
+}
+
+.store__swiper .swiper-pagination-bullet-active {
+    background: #C9A84C;
+  width: rem(6);
+  height: rem(6);
+  border-radius: 0;
+}
+
+.store__slide {
+  display: flex;
+  flex-direction: column;
+  gap: rem(20);
+}
+
+.store__slide-img {
+  width: 100%;
+}
+
+.store__slide-img img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.store__slide-img--placeholder {
+  width: 100%;
+  height: auto;
+  background: #e0dad4;
+}
+
+.store__slide-name {
+  @include font(16, 24.8, null,$regular);
+}
+
+
+// ============================================================
+// S06_JOB：募集要項
+// ============================================================
+.job {
+padding-top: rem(45);
+background: $white;
+}
+
+.job__top-img {
+  width: 100%;
+  margin-top: rem(-154);
+  background: linear-gradient(to bottom, transparent rem(154), $white rem(154));
+}
+
+.job__top-img img {
+  width: 100%;
+}
+
+.job__heading {
+
+}
+
+.job__table {
+  display: flex;
+  flex-direction: column;
+  margin-top: rem(40);
+}
+
+.job__sep {
+  width: 100%;
+  height: 1px;
+  background: #dddddd;
+}
+
+.job__row {
+  display: flex;
+  flex-direction: column;
+  gap: rem(12);
+  padding: rem(14) 0;
+}
+
+.job__label {
+  @include font(14, 22.4, null, $semi);
+  color: $red;
+}
+
+.job__content {
+  @include font(16, 24, null, $regular);
+}
+
+.job__flow{
+    padding-top: rem(75);
+}
+
+.job__flow-inner{
+    padding: rem(44) rem(60) rem(29);
+    background: $gray;
+    position: relative;
+
+    &::before{
+        position: absolute;
+        content: "";
+        background: $red;
+        width: 1px;
+        height: rem(60);
+        left: 50%;
+        transform: translateX(-50%);
+        top: rem(-30);
+
+    }
+}
+
+
+.job__flow-head {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  gap: rem(12);
+}
+
+.job__flow-label {
+  font-family: $en;
+  @include font(14, 14, null, $regular);
+  color: $red;
+}
+
+.job__flow-title {
+  @include font(23, 23, 100, $semi);
+}
+
+.job__flow-list {
+  list-style: none;
+  margin-top: rem(24);
+}
+
+
+.job__flow-item {
+  display: grid;
+  grid-template-columns: rem(40) 1fr;
+  gap: rem(12);
+  align-items: center;
+}
+
+.job__flow-item + .job__flow-item{
+    margin-top: rem(14);
+}
+
+.job__flow-num {
+  font-family: $infant;
+  @include font(23, 23, 100, $semi);
+  color: $red; 
+  background: $white;
+  position: relative;
+  width: 100%;
+  height: rem(40);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.job__flow-num::before {
+  content: "";
+  position: absolute;
+  background: url(../img/hamburder-bg-lt.svg) no-repeat center / contain;
+  width: rem(29);
+  height: rem(31);
+  top: 0;
+  left: 0;
+}
+
+.job__flow-num::after {
+    content: "";
+    position: absolute;
+    background: url(../img/hamburder-bg-rb.svg) no-repeat center / contain;
+    width: rem(29);
+    height: rem(31);
+    bottom: -1px;
+    right: -1px;
+}
+
+.job__flow-text {
+  @include font(16, 25.6, null, $semi);
+}
+
+// ============================================================
+// コラージュセクション
+// ============================================================
+.collage {
+  width: 100%;
+}
+
+.collage img {
+  width: 100%;
+}
+
+// ============================================================
+// ENTRY
+// ============================================================
+.entry {
+  position: relative;
+padding-top: rem(183);
+padding-bottom: rem(72);
+
+@include mq('md'){
+    padding-top: rem(349);
+    padding-bottom: rem(210);
+}
+}
+
+.entry__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.entry__bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.entry__inner {
+  position: relative;
+  z-index: 1;
+
+  @include mq("md") {
+    max-width: rem(700);
+    margin: 0 auto;
+ }
+}
+
+.entry__heading {
+    text-align: center;
+}
+
+.entry__h2 {
+  font-family: $en;
+  @include font(48, 48, null, $regular);
+  color: $white;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.50);
+
+  @include mq("md") {
+    @include font(100, 100);
+  }
+}
+
+.entry__amp {
+  font-family: $serif;
+  @include font(40, 40, null, $regular);
+
+  @include mq('md'){
+    @include font(80,80);
+  }
+}
+
+.entry__h2-sub {
+  @include font(16, 25.6, null, $semi);
+  color: $white;
+  text-shadow: 0 0 10px #000;
+
+  @include mq('md'){
+    @include font(23,36.8);
+  }
+}
+
+.entry__cta-text {
+    padding-top: rem(55);
+  @include font(23, 36.8, null, $bold);
+  color: $white;
+  text-align: center;
+
+  @include mq('md'){
+    padding-top: rem(113);
+    @include font(32,51.2);
+  }
+}
+
+.entry__btns {
+    padding-top: rem(30);
+  display: flex;
+  flex-direction: column;
+  gap: rem(18);
+}
+
+.entry__btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: rem(269);
+  height: rem(66);
+  margin: 0 auto;
+  text-decoration: none;
+  overflow: hidden;
+
+  @include mq('md'){
+    width: rem(395);
+    height: rem(100);
+  }
+}
+
+.entry__btn-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+.entry__btn-logo {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+
+// ============================================================
+// DOWNLOAD
+// ============================================================
+.download {
+  position: relative;
+  overflow: hidden;
+  padding-top: rem(43);
+  padding-bottom: rem(58);
+
+  @include mq('md'){
+    padding-top: rem(216);
+    padding-bottom: rem(195);
+  }
+}
+
+.download__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.download__bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.download__inner {
+  position: relative;
+  z-index: 1;
+}
+
+.download__text {
+  @include font(23, 36.8, null, $bold);
+  color: $white;
+  text-align: center;
+
+  @include mq('md'){
+    @include font(32,51.2);
+  }
+}
+
+.download__pamphlet {
+  position: relative;
+  width: rem(271);
+  margin: rem(30) auto 0;
+
+  @include mq('md'){
+    width: rem(399);
+  }
+
+}
+
+.download__pamphlet-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+.download__btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: rem(269);
+  height: rem(60);
+  margin: rem(40) auto 0;
+  transition: opacity 0.3s ease;
+
+  @include mq('md'){
+    margin-top: rem(50);
+    width: rem(396);
+    height: rem(99);
+  }
+}
+
+.download__btn:hover {
+  opacity: 0.8;
+}
+
+.download__btn-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+.download__btn-text {
+  position: relative;
+  z-index: 1;
+  @include font(18, 25.2, null, $bold);
+  color: $white;
+
+  @include mq('md'){
+    @include font(26,42);
+  }
+}
+
+// ============================================================
+// FOOTER
+// ============================================================
+.footer {
+  background: #322e2c;
+  height: rem(71);
+
+  @include mq('md'){
+    height: rem(100);
+  }
+}
+
+.footer__inner {
+  height: 100%;
+  padding: rem(12) rem(20);
+
+  @include mq('md'){
+    padding: rem(27) rem(20);
+  }
+
+}
+
+.footer__logo {
+  width: rem(66);
+  margin: 0 auto;
+  height: auto;
+}
+
+.footer__copy {
+    margin-top: rem(10);
+  font-family: $en;
+  @include font(12, 19.2, null, $regular);
+  color: $white;
+  text-align: center;
+}
