@@ -1,3 +1,10 @@
+
+
+// ============================================================
+// PC サイドバー左（ナビ）
+
+// ============================================================
+
 .pc-content-bg {
   @include mq(md) {
     background: $gray;
@@ -28,9 +35,6 @@
   }
 }
 
-// ============================================================
-// PC サイドバー左（ナビ）
-// ============================================================
 .pc-side-nav {
   display: none;
 
@@ -83,6 +87,7 @@
   @include font(12, 16.8, 200, $regular);
   color: #927010;
   padding-top: rem(5);
+  text-transform: uppercase;
 }
 
 .pc-side-nav__cta {
@@ -140,7 +145,7 @@
     position: sticky;
     top: rem(100);
     z-index: 80;
-    padding-top: rem(337);
+    padding-top: rem(269);
   }
 }
 
@@ -485,6 +490,7 @@ html.is-fixed .header__cta-btn {
   @include font(12, 16.8, 200, $regular);
   color: #927010;
   padding-top: rem(5);
+  text-transform: uppercase;
 }
 
 .drawer__cta {
@@ -743,6 +749,7 @@ html.is-fixed {
   font-family: $en;
   @include font(48, 48, null, $light);
   color: rgba(255, 255, 255, 0.9);
+  text-transform: uppercase;
 
   @include mq("md") {
     @include font(100, 100);
@@ -770,6 +777,14 @@ html.is-fixed {
   @include mq("md") {
     @include font(20, 40);
     text-align: center;
+  }
+}
+
+.message__body p {
+  display: inline;
+
+  @include mq("md") {
+    display: block;
   }
 }
 
@@ -827,6 +842,7 @@ html.is-fixed {
   font-family: $en;
   color: $black;
   @include font(48, 48, null, $medium);
+  text-transform: uppercase;
 }
 
 .section-h2__amp {
@@ -1118,6 +1134,23 @@ html.is-fixed {
   @include font(16, 25.6, null, $semi);
 }
 
+.interview__timeline-wrapper{
+  margin-top: rem(20);
+}
+
+.interview__schedule-label{
+  color: $red;
+  @include font(16,25.6,null,$semi);
+}
+
+.interview__schedule-label + .interview__timeline{
+  margin-top: rem(10);
+}
+
+.interview__timeline + .interview__schedule-label{
+  margin-top: rem(20);
+}
+
 .interview__timeline {
   position: relative;
   list-style: none;
@@ -1321,7 +1354,6 @@ html.is-fixed {
   display: flex;
   align-items: center;
   justify-content: left;
-  padding-left: rem(20);
 }
 
 .store__swiper .swiper-pagination-bullet {
@@ -1352,7 +1384,7 @@ html.is-fixed {
 
 .store__slide-img img {
   width: 100%;
-  height: auto;
+  aspect-ratio: 326 / 213;
   object-fit: cover;
 }
 
@@ -1452,6 +1484,7 @@ background: $white;
   font-family: $en;
   @include font(14, 14, null, $regular);
   color: $red;
+  text-transform: uppercase
 }
 
 .job__flow-title {
@@ -1570,6 +1603,7 @@ padding-bottom: rem(72);
   @include font(48, 48, null, $regular);
   color: $white;
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.50);
+  text-transform: uppercase;
 
   @include mq("md") {
     @include font(100, 100);
