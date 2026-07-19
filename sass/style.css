@@ -263,6 +263,11 @@ select::-ms-expand {
   padding: 1.25rem 0;
   text-decoration: none;
   border-bottom: 0.5px solid #898989;
+  transition: opacity 0.3s ease;
+}
+
+.pc-side-nav__link:hover {
+  opacity: 0.65;
 }
 
 .pc-side-nav__num {
@@ -311,6 +316,11 @@ select::-ms-expand {
   height: 4.25rem;
   text-decoration: none;
   overflow: hidden;
+  transition: opacity 0.3s ease;
+}
+
+.pc-side-nav__btn:hover {
+  opacity: 0.7;
 }
 
 .pc-side-nav__btn-bg {
@@ -406,11 +416,16 @@ select::-ms-expand {
   display: block;
   width: 4.3125rem;
   flex-shrink: 0;
+  transition: opacity 0.3s ease;
 }
 @media screen and (min-width: 768px) {
   .header__logo {
     width: 8.625rem;
   }
+}
+
+.header__logo:hover {
+  opacity: 0.7;
 }
 
 .header__logo img {
@@ -465,11 +480,16 @@ select::-ms-expand {
   width: 7.3125rem;
   height: 2.5625rem;
   text-decoration: none;
+  transition: opacity 0.3s ease;
 }
 @media screen and (min-width: 1250px) {
   .header__cta-btn {
     display: none;
   }
+}
+
+.header__cta-btn:hover {
+  opacity: 0.7;
 }
 
 html.is-fixed .header__cta-btn {
@@ -684,6 +704,11 @@ html.is-fixed .header__cta-btn {
   padding: 1.25rem 0;
   text-decoration: none;
   border-bottom: 0.5px solid #898989;
+  transition: opacity 0.3s ease;
+}
+
+.drawer__link:hover {
+  opacity: 0.65;
 }
 
 .drawer__list li:first-child .drawer__link {
@@ -737,6 +762,11 @@ html.is-fixed .header__cta-btn {
   text-decoration: none;
   overflow: hidden;
   margin: 0 auto;
+  transition: opacity 0.3s ease;
+}
+
+.drawer__cta-btn:hover {
+  opacity: 0.7;
 }
 
 .drawer__cta-btn-bg {
@@ -1953,12 +1983,17 @@ html.is-fixed {
   margin: 0 auto;
   text-decoration: none;
   overflow: hidden;
+  transition: opacity 0.3s ease;
 }
 @media screen and (min-width: 768px) {
   .entry__btn {
     width: 24.6875rem;
     height: 6.25rem;
   }
+}
+
+.entry__btn:hover {
+  opacity: 0.7;
 }
 
 .entry__btn-bg {

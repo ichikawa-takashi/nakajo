@@ -66,6 +66,11 @@
   padding: rem(20) 0;
   text-decoration: none;
   border-bottom: 0.5px solid #898989;
+  transition: opacity 0.3s ease;
+}
+
+.pc-side-nav__link:hover {
+  opacity: 0.65;
 }
 
 .pc-side-nav__num {
@@ -106,6 +111,11 @@
   height: rem(68);
   text-decoration: none;
   overflow: hidden;
+  transition: opacity 0.3s ease;
+}
+
+.pc-side-nav__btn:hover {
+  opacity: 0.7;
 }
 
 .pc-side-nav__btn-bg {
@@ -200,10 +210,15 @@
   display: block;
   width: rem(69);
   flex-shrink: 0;
+  transition: opacity 0.3s ease;
 
   @include mq("md") {
     width: rem(138);
   }
+}
+
+.header__logo:hover {
+  opacity: 0.7;
 }
 
 .header__logo img {
@@ -254,10 +269,15 @@
   width: rem(117);
   height: rem(41);
   text-decoration: none;
+  transition: opacity 0.3s ease;
 
   @include mq(1250) {
     display: none;
   }
+}
+
+.header__cta-btn:hover {
+  opacity: 0.7;
 }
 
 html.is-fixed .header__cta-btn {
@@ -465,6 +485,11 @@ html.is-fixed .header__cta-btn {
   padding: rem(20) 0;
   text-decoration: none;
   border-bottom: 0.5px solid #898989;
+  transition: opacity 0.3s ease;
+}
+
+.drawer__link:hover {
+  opacity: 0.65;
 }
 
 .drawer__list li:first-child .drawer__link {
@@ -510,6 +535,11 @@ html.is-fixed .header__cta-btn {
   text-decoration: none;
   overflow: hidden;
   margin: 0 auto;
+  transition: opacity 0.3s ease;
+}
+
+.drawer__cta-btn:hover {
+  opacity: 0.7;
 }
 
 .drawer__cta-btn-bg {
@@ -1658,11 +1688,16 @@ padding-bottom: rem(72);
   margin: 0 auto;
   text-decoration: none;
   overflow: hidden;
+  transition: opacity 0.3s ease;
 
   @include mq('md'){
     width: rem(395);
     height: rem(100);
   }
+}
+
+.entry__btn:hover {
+  opacity: 0.7;
 }
 
 .entry__btn-bg {
