@@ -160,6 +160,7 @@ textarea {
   border: none;
   border-radius: 0;
   font: inherit;
+  color: inherit;
   outline: none;
 }
 
@@ -643,6 +644,7 @@ html.is-fixed .header__cta-btn {
   z-index: 200;
   visibility: hidden;
   pointer-events: none;
+  transition: visibility 0s linear 0.35s;
 }
 @media screen and (min-width: 768px) {
   .drawer {
@@ -659,6 +661,7 @@ html.is-fixed .header__cta-btn {
 .drawer.is-open {
   visibility: visible;
   pointer-events: auto;
+  transition-delay: 0s;
 }
 
 .drawer.is-open .drawer__overlay {

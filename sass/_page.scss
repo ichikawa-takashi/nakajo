@@ -426,6 +426,7 @@ html.is-fixed .header__cta-btn {
   z-index: 200;
   visibility: hidden;
   pointer-events: none;
+  transition: visibility 0s linear 0.35s;
 
   @include mq("md") {
     top: rem(100);
@@ -440,6 +441,7 @@ html.is-fixed .header__cta-btn {
 .drawer.is-open {
   visibility: visible;
   pointer-events: auto;
+  transition-delay: 0s;
 }
 
 .drawer.is-open .drawer__overlay {
