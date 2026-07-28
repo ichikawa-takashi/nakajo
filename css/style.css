@@ -200,6 +200,10 @@ select::-ms-expand {
   }
 }
 
+.pc-content-bg {
+  position: relative;
+  z-index: 1;
+}
 @media screen and (min-width: 768px) {
   .pc-content-bg {
     background: #F5F5F5;
@@ -807,8 +811,35 @@ html.is-fixed {
   overflow: hidden;
 }
 
+.fv-message {
+  position: relative;
+}
+
+.fv-message__bg {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  height: 100svh;
+  margin-bottom: -100vh;
+  margin-bottom: -100svh;
+  overflow: hidden;
+  z-index: 0;
+  --fv-tint: 0.3;
+}
+.fv-message__bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, var(--fv-tint));
+  z-index: 1;
+  pointer-events: none;
+}
+
 .mv {
   position: relative;
+  z-index: 1;
   height: 47.9375rem;
   overflow: hidden;
 }
@@ -857,7 +888,7 @@ html.is-fixed {
 }
 @media screen and (min-width: 768px) {
   .mv__content {
-    top: 57%;
+    top: 40%;
     gap: 2.0625rem;
   }
 }
@@ -964,22 +995,24 @@ html.is-fixed {
 
 .message {
   position: relative;
+  z-index: 1;
   overflow: hidden;
 }
 
-.message__bg {
+.message__fade {
   position: absolute;
-  top: 0;
+  bottom: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 10rem;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.15) 30%, rgba(255, 255, 255, 0.45) 55%, rgba(255, 255, 255, 0.8) 80%, rgb(255, 255, 255) 100%);
+  pointer-events: none;
 }
-
-.message__bg img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center top;
+@media screen and (min-width: 768px) {
+  .message__fade {
+    height: 26.25rem;
+    background: linear-gradient(180deg, rgba(245, 245, 245, 0) 0%, rgba(245, 245, 245, 0.15) 30%, rgba(245, 245, 245, 0.45) 55%, rgba(245, 245, 245, 0.8) 80%, whitesmoke 100%);
+  }
 }
 
 .message__inner {
@@ -1240,6 +1273,7 @@ html.is-fixed {
   line-height: 1;
   letter-spacing: 0.1em;
   font-weight: 400;
+  white-space: nowrap;
 }
 
 .interview__closed-date {
@@ -1247,6 +1281,7 @@ html.is-fixed {
   line-height: 1;
   letter-spacing: 0.1em;
   font-weight: 400;
+  word-break: keep-all;
 }
 
 /* 開いている時：閉じコンテンツを非表示 */
@@ -1264,6 +1299,7 @@ html.is-fixed {
 .interview__item.is-open > .interview__header > .interview__info {
   display: grid;
   flex: 1;
+  min-width: 0;
 }
 
 .interview__label {
@@ -1294,6 +1330,7 @@ html.is-fixed {
   line-height: 1;
   letter-spacing: 0.1em;
   font-weight: 600;
+  word-break: keep-all;
 }
 
 .interview__meta {
@@ -1304,6 +1341,11 @@ html.is-fixed {
   line-height: 1;
   letter-spacing: 0.1em;
   font-weight: 400;
+  word-break: keep-all;
+}
+
+.interview__meta-en {
+  white-space: nowrap;
 }
 
 .interview__name {

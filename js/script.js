@@ -98,6 +98,27 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     });
 
     // ============================================================
+    // FV〜messageセクション：固定背景の暗さをスクロール量に応じて変化
+    // FV表示中は暗くせず、messageセクションが画面に入るにつれて
+    // 徐々に暗くなり、messageセクション到達後は現状と同じ暗さを維持する
+    // ============================================================
+    var $fvBg = $('.fv-message__bg');
+    var $messageSection = $('#message');
+
+    function updateFvTint() {
+        if (!$messageSection.length) return;
+        var winH = window.innerHeight;
+        var rectTop = $messageSection[0].getBoundingClientRect().top;
+        var progress = (winH - rectTop) / winH;
+        progress = Math.min(Math.max(progress, 0), 1);
+        $fvBg.css('--fv-tint', (progress * 0.3).toFixed(3));
+    }
+
+    $(window).on('scroll', updateFvTint);
+    $(window).on('resize', updateFvTint);
+    updateFvTint();
+
+    // ============================================================
     // 店舗スライダー（各グループ）
     // ============================================================
     $('.store__swiper').each(function () {

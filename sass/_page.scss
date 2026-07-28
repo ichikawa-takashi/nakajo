@@ -6,6 +6,12 @@
 // ============================================================
 
 .pc-content-bg {
+  // .fv-message（固定背景スライド）はposition指定のため、
+  // 後続の静的配置(position:static)の要素より手前に描画されてしまう。
+  // position:relativeにして描画順を通常のDOM順に戻し、確実に上に重なるようにする。
+  position: relative;
+  z-index: 1;
+
   @include mq(md) {
     background: $gray;
     padding-top: rem(209);
@@ -576,10 +582,50 @@ html.is-fixed {
 }
 
 // ============================================================
+// S02+S03：ファーストビュー〜代表メッセージ（固定背景スライド）
+// ------------------------------------------------------------
+// .fv-message__bg を position:sticky にし、直後に自身の高さ分の
+// 負のmargin-bottomを付けることで、後続の.mv/.messageが
+// スクロールでその上を通過しているように見せる。
+// ============================================================
+.fv-message {
+  position: relative;
+}
+
+.fv-message__bg {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  height: 100svh;
+  margin-bottom: -100vh;
+  margin-bottom: -100svh;
+  overflow: hidden;
+  z-index: 0;
+
+  // --fv-tint はJS側でスクロール量に応じて0〜0.3を設定する（FV表示中は0、
+  // messageセクションに差し掛かると徐々に増加）。JS未実行時は0.3を初期値とし、
+  // 文字が読みにくくならないようにする。
+  --fv-tint: 0.3;
+
+  // スライドの上に薄暗いティントを重ね、透過部分の文字を読みやすくする
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, var(--fv-tint));
+    z-index: 1;
+    pointer-events: none;
+  }
+}
+
+// ============================================================
 // S02_MV：ファーストビュー
 // ============================================================
 .mv {
   position: relative;
+  z-index: 1;
   height: rem(767);
   overflow: hidden;
 
@@ -626,7 +672,7 @@ html.is-fixed {
   gap: rem(20);
 
   @include mq("md") {
-    top: 57%;
+    top: 40%;
     gap: rem(33);
   }
 }
@@ -728,22 +774,37 @@ html.is-fixed {
 // ============================================================
 .message {
   position: relative;
+  z-index: 1;
   overflow: hidden;
 }
 
-.message__bg {
+// 下部を白くフェードさせ、次のセクションへ繋げる。
+// 終端の色は次セクションの実際の背景色に合わせ、平坦な帯を作らず
+// 最後までなだらかにカーブさせることで、継ぎ目の線が出ないようにする。
+.message__fade {
   position: absolute;
-  top: 0;
+  bottom: 0;
   left: 0;
   width: 100%;
-  height: 100%;
-}
+  height: rem(160);
+  background: linear-gradient(180deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.15) 30%,
+    rgba(255, 255, 255, 0.45) 55%,
+    rgba(255, 255, 255, 0.8) 80%,
+    rgba(255, 255, 255, 1) 100%);
+  pointer-events: none;
 
-.message__bg img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center top;
+  // md以上は次セクション(.pc-content-bg)の背景色が$grayのため、それに合わせる
+  @include mq("md") {
+    height: rem(420);
+    background: linear-gradient(180deg,
+      rgba($gray, 0) 0%,
+      rgba($gray, 0.15) 30%,
+      rgba($gray, 0.45) 55%,
+      rgba($gray, 0.8) 80%,
+      rgba($gray, 1) 100%);
+  }
 }
 
 .message__inner {
@@ -978,10 +1039,12 @@ html.is-fixed {
 
 .interview__closed-en {
   @include font(16, 16, 100, $regular);
+  white-space: nowrap;
 }
 
 .interview__closed-date {
   @include font(16, 16, 100, $regular);
+  word-break: keep-all;
 }
 
 /* 開いている時：閉じコンテンツを非表示 */
@@ -999,6 +1062,7 @@ html.is-fixed {
 .interview__item.is-open > .interview__header > .interview__info {
   display: grid;
   flex: 1;
+  min-width: 0;
 }
 
 .interview__label {
@@ -1022,6 +1086,7 @@ html.is-fixed {
 .interview__role {
   font-family: $mincho;
   @include font(23, 23, 100, $semi);
+  word-break: keep-all;
 }
 
 .interview__meta {
@@ -1029,6 +1094,11 @@ html.is-fixed {
   align-items: center;
   gap: rem(5);
   @include font(16, 16, 100, $regular);
+  word-break: keep-all;
+}
+
+.interview__meta-en {
+  white-space: nowrap;
 }
 
 .interview__meta-sep {
