@@ -1664,6 +1664,11 @@ html.is-fixed {
   gap: 2.5rem;
 }
 
+.store__group {
+  width: 100%;
+  min-width: 0;
+}
+
 .store__group-head {
   display: flex;
   align-items: center;
@@ -1691,16 +1696,46 @@ html.is-fixed {
 }
 
 .store__swiper {
-  width: 100%;
-  margin-left: 1.25rem;
+  width: 20.9375rem;
+  max-width: calc(100vw - 2.5rem);
+  margin-right: auto;
+  margin-left: auto;
   padding-bottom: 0.75rem;
   margin-top: 0.75rem;
-  overflow: visible;
   overflow: hidden;
 }
 
 .store__swiper .swiper-slide {
-  width: 20.375rem;
+  width: 100%;
+}
+
+.store__swiper-button {
+  position: absolute;
+  z-index: 2;
+  top: 6.84375rem;
+  width: 1.4375rem;
+  height: 1.4375rem;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  transform: translateY(-50%);
+}
+
+.store__swiper-button img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.store__swiper-button--prev {
+  left: 0;
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.store__swiper-button--next {
+  right: 0;
+  transform: translateY(-50%);
 }
 
 .store__swiper .swiper-pagination {

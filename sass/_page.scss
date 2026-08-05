@@ -1414,6 +1414,11 @@ html.is-fixed {
   gap: rem(40);
 }
 
+.store__group {
+  width: 100%;
+  min-width: 0;
+}
+
 .store__group-head {
   display: flex;
   align-items: center;
@@ -1439,16 +1444,46 @@ html.is-fixed {
 }
 
 .store__swiper {
-  width: 100%;
-  margin-left: rem(20);
+  width: rem(335);
+  max-width: calc(100vw - rem(40));
+  margin-right: auto;
+  margin-left: auto;
   padding-bottom: rem(12);
   margin-top: rem(12);
-  overflow: visible;
   overflow: hidden;
 }
 
 .store__swiper .swiper-slide {
-  width: rem(326);
+  width: 100%;
+}
+
+.store__swiper-button {
+  position: absolute;
+  z-index: 2;
+  top: rem(109.5);
+  width: rem(23);
+  height: rem(23);
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  transform: translateY(-50%);
+}
+
+.store__swiper-button img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.store__swiper-button--prev {
+  left: 0;
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.store__swiper-button--next {
+  right: 0;
+  transform: translateY(-50%);
 }
 
 .store__swiper .swiper-pagination {

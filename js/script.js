@@ -125,9 +125,13 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
         new Swiper(this, {
             loop: true,
             speed: 400,
-            slidesPerView: 'auto',
+            slidesPerView: 1,
             spaceBetween: 0,
             grabCursor: true,
+            navigation: {
+                nextEl: $(this).find('.store__swiper-button--next')[0],
+                prevEl: $(this).find('.store__swiper-button--prev')[0],
+            },
             pagination: {
                 el: $(this).find('.swiper-pagination')[0],
                 clickable: true,
