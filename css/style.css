@@ -826,7 +826,7 @@ html.is-fixed {
   margin-bottom: -100svh;
   overflow: hidden;
   z-index: 0;
-  --fv-tint: 0.3;
+  --fv-tint: 0.5;
 }
 .fv-message__bg::after {
   content: "";
