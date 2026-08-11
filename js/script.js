@@ -27,9 +27,11 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     $(document).on('click', 'a[href*="#"]', function () {
         let time = 400;
         let header = $('header').innerHeight();
+        // PC表示のみ、遷移先が下すぎないように少し多めにスクロールする
+        let scrollMargin = window.matchMedia("(min-width: 768px)").matches ? 30 : 0;
         let target = $(this.hash);
         if (!target.length) return;
-        let targetY = target.offset().top - header;
+        let targetY = target.offset().top - header + scrollMargin;
         $('html,body').animate({
             scrollTop: targetY
         }, time, 'swing');
