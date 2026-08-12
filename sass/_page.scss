@@ -996,6 +996,7 @@ html.is-fixed {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: rem(12);
   width: 100%;
   padding: rem(24) rem(20);
   background: none;
@@ -1006,6 +1007,7 @@ html.is-fixed {
 
 /* 閉じている時のヘッダーコンテンツ */
 .interview__closed {
+  flex: 1;
   padding-right: rem(10);
   min-width: 0;
 }
@@ -1040,7 +1042,7 @@ html.is-fixed {
 
 .interview__closed-en {
   @include font(16, 16, 100, $regular);
-  white-space: nowrap;
+  word-break: keep-all;
 }
 
 .interview__closed-date {
@@ -1061,7 +1063,8 @@ html.is-fixed {
 }
 
 .interview__item.is-open > .interview__header > .interview__info {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   flex: 1;
   min-width: 0;
 }
@@ -1085,21 +1088,25 @@ html.is-fixed {
 }
 
 .interview__role {
+  min-width: 0;
   font-family: $mincho;
-  @include font(23, 23, 100, $semi);
+  @include font(23, 31, 100, $semi);
   word-break: keep-all;
+  overflow-wrap: anywhere;
 }
 
 .interview__meta {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: rem(5);
+  min-width: 0;
   @include font(16, 16, 100, $regular);
   word-break: keep-all;
 }
 
 .interview__meta-en {
-  white-space: nowrap;
+  overflow-wrap: anywhere;
 }
 
 .interview__meta-sep {

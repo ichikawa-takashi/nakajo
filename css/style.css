@@ -1224,6 +1224,7 @@ html.is-fixed {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 0.75rem;
   width: 100%;
   padding: 1.5rem 1.25rem;
   background: none;
@@ -1234,6 +1235,7 @@ html.is-fixed {
 
 /* 閉じている時のヘッダーコンテンツ */
 .interview__closed {
+  flex: 1;
   padding-right: 0.625rem;
   min-width: 0;
 }
@@ -1274,7 +1276,7 @@ html.is-fixed {
   line-height: 1;
   letter-spacing: 0.1em;
   font-weight: 400;
-  white-space: nowrap;
+  word-break: keep-all;
 }
 
 .interview__closed-date {
@@ -1298,7 +1300,8 @@ html.is-fixed {
 }
 
 .interview__item.is-open > .interview__header > .interview__info {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   flex: 1;
   min-width: 0;
 }
@@ -1326,18 +1329,22 @@ html.is-fixed {
 }
 
 .interview__role {
+  min-width: 0;
   font-family: "Shippori Mincho B1", sans-serif;
   font-size: 1.4375rem;
-  line-height: 1;
+  line-height: 1.347826087;
   letter-spacing: 0.1em;
   font-weight: 600;
   word-break: keep-all;
+  overflow-wrap: anywhere;
 }
 
 .interview__meta {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 0.3125rem;
+  min-width: 0;
   font-size: 1rem;
   line-height: 1;
   letter-spacing: 0.1em;
@@ -1346,7 +1353,7 @@ html.is-fixed {
 }
 
 .interview__meta-en {
-  white-space: nowrap;
+  overflow-wrap: anywhere;
 }
 
 .interview__name {
